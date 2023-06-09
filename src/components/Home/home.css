@@ -21,17 +21,17 @@ justify-content: space-between;
     gap: 3em;
     align-items: center;
     justify-content: center;
-    flex: 1;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -80%);
     z-index: 1;
 }
 .main-title{
     font-size: 4em;
     /*color: rgb(0, 138, 179);*/
     color: white;
+    white-space: nowrap;
 }
 .second-title{
     font-size: 2.5em;
@@ -39,7 +39,12 @@ justify-content: space-between;
 }
 .container-cv-letter{
     display: flex;
-    gap: 5em;
+    position: absolute;
+    z-index: 1;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    gap: 1em;
 }
 .btn{
     border: none;
@@ -71,4 +76,89 @@ justify-content: space-between;
 .letter:hover{
     transform: scale(1.07);
     transition: all smooth ease-out 1s both;
+}
+@media(max-width: 865px){
+    .main-title{
+        font-size: 3.5em;
+    }
+    .second-title{
+        font-size: 2em;
+    }
+    .container-cv-letter{
+        gap: 3em;
+    }
+}
+@media(max-width: 756px){
+    .main-title{
+        font-size: 3em;
+    }
+    .second-title{
+        font-size: 1.5em;
+    }
+    .container-cv-letter{
+        gap: 2em;
+    }
+    .linkHome{
+        font-size: 1.1em;
+    }
+}
+@media(max-width: 648px){
+    .container-cv-letter{
+        gap: 1em;
+    }
+    .linkHome{
+        font-size: 1em;
+    }
+}
+@media(max-width: 600px){
+    .container_infos{
+        top: 25%;
+        gap: 1em;
+    }
+    .second-title{
+        font-size: 1.3em;
+    }
+    .container-cv-letter{
+        gap: 0.1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .linkHome{
+        font-size: 1.5em;
+    }
+}
+@media(max-width: 476px){
+    .linkHome{
+        font-size: 1.3em;
+    }
+}
+@media(max-width: 426px){
+    .linkHome{
+        font-size: 1.1em;
+    }
+    .main-title{
+        font-size: 2.5em;
+    }
+}
+@media(max-width: 360px){
+    .linkHome{
+        font-size: 1em;
+    }
+}
+@media(max-width: 334px){
+    .container-cv-letter{
+        top: 70%;
+        gap: 3em;
+        width: 100%;
+    }
+}
+@media(max-width: 288px){
+    .main-title{
+        font-size: 1.7em;
+    }
+    .second-title{
+        font-size: 1.2em;
+    }
 }
