@@ -65,14 +65,14 @@ function Navbar() {
     return (
         <>
             <div className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
-                <Link className='navbar_logo' to='home' spy={true} smooth={true} offset={0} duration={800} onClick={handleShowLinks}>Aurélien Allenic</Link>
-                <Link className='navbar_logo_home' to='home' spy={true} smooth={true} offset={0} duration={800}><AiOutlineHome /></Link>
+                <a className='navbar_logo' href='home' onClick={handleShowLinks}>Aurélien Allenic</a>
+                <a className='navbar_logo_home' href='home'><AiOutlineHome /></a>
                 <ul className='navbar_links'>
                     <li className='navbar_item slideInDown-1'>
-                        <Link className='navbar_link' to='home' spy={true} smooth={true} offset={0} duration={800} onClick={handleShowLinks}>Home</Link>
+                        <a className='navbar_link' href='/' onClick={handleShowLinks}>Home</a>
                     </li>
                     <li className='navbar_item slideInDown-2'>
-                        <Link className='navbar_link' to='experience' spy={true} smooth={true} offset={0} duration={800} onClick={handleShowLinks}>Experience</Link>
+                        <a className='navbar_link' href='/languages' onClick={handleShowLinks}>Programmation</a>
                     </li>
                     <li className='navbar_item slideInDown-3'>
                         <div className='navbar_link' onMouseEnter={onMouseEnter}
@@ -84,22 +84,22 @@ function Navbar() {
                                     {DropDownElements.map((item, index) => {
                                         return (
                                             <li key={index}>
-                                                <Link to={item.path}
-                                                    className='linkStyle' spy={true} smooth={true} offset={0} duration={800}
+                                                <a to={item.path}
+                                                    className='linkStyle'
                                                     onClick={handleShowLinks}
                                                 >
                                                     <span onClick={closeBoth}>{item.title}</span>
-                                                </Link>
+                                                </a>
                                             </li>
                                         );
                                     })}
                                 </ul>}</div>
                     </li>
                     <li className='navbar_item slideInDown-4'>
-                        <Link className='navbar_link' to='interests' spy={true} smooth={true} offset={0} duration={800} onClick={handleShowLinks}>Interests</Link>
+                        <a className='navbar_link' to='interests' onClick={handleShowLinks}>Interests</a>
                     </li>
                     <li className='navbar_item slideInDown-5'>
-                        <Link className='navbar_link' to='contact' spy={true} smooth={true} offset={0} duration={800} onClick={handleShowLinks}>Contact</Link>
+                        <a className='navbar_link' to='contact' onClick={handleShowLinks}>Contact</a>
                     </li>
                 </ul>
                 <button className='navbar_burger' onClick={handleShowLinks}>

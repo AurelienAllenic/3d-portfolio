@@ -1,9 +1,11 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from "./components/Home/Home"
 import Navbar from "./components/nav/Nav"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import BarLoader from "react-spinners/BarLoader";
 import {useState, useEffect} from "react"
+import Languages from "./components/Languages/Languages";
 
 function App() {
 
@@ -12,7 +14,7 @@ function App() {
     setLoading(true)
     setTimeout(()=>{
       setLoading(false)
-    }, 3000)
+    }, 2000)
   }, [])
   useEffect(() => {
     AOS.init();
@@ -35,8 +37,15 @@ function App() {
   /></div>
   :<>
   <div className='animation-apparition'>
-      <Home/>
-      <Navbar/>
+    <Navbar/>
+    <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<Home />}></Route>
+    </Routes>
+    <Routes>
+    <Route path="/languages" element={<Languages />}></Route>
+    </Routes>
+   </BrowserRouter>
     </div>
     </>
 }
