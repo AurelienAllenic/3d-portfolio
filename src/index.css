@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "Geomanist";
+    src: url("/public/Geomanist-Regular&Italic/Webfont/Geomanist-Regular-Webfont/geomanist-regular-webfont.woff");
+    }
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+body{
+  background: url('/public/back.jpg') center/cover;
+  font-family: "Geomanist";
+}
+a{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+.container_globe{
+  height: 10vh;
+}
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+.animation-apparition{
+  animation: apparition 1s forwards;
+}
