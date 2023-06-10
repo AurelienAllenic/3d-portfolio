@@ -8,6 +8,8 @@ import {useState, useEffect} from "react"
 import Languages from "./components/Languages/Languages";
 import ReactFormation from './components/Portfolio/ReactFormation';
 import DevFormation from './components/Portfolio/DevFormation';
+import PersoProjects from './components/Portfolio/PersoProjects';
+import Interests from './components/Interests/Interests';
 
 function App() {
 
@@ -52,6 +54,12 @@ function App() {
     </Routes>
     <Routes>
     <Route path="/dev-formation" element={<DevFormation />}></Route>
+    </Routes>
+    <Routes>
+    <Route path="/personnal-projects" element={<PersoProjects />}></Route>
+    </Routes>
+    <Routes>
+    <Route path="/interests" element={<Interests />}></Route>
     </Routes>
     
    </BrowserRouter>

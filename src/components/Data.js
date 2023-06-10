@@ -100,10 +100,4 @@ export const projects = [
         title: "claquettes-swing.fr : participation à la création et au déploiement",
         demo: 'https://claquettes-swing.fr'
     },
-    {
-        id: 4,
-        image: Linconnu,
-        title: "linconnu-magic.com : site vitrine à destination des passionnés de magie qui me suivent sur les réseaux sociaux",
-        demo: 'https://linconnu-magic.com'
-    },
 ]

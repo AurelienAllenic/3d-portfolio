@@ -96,10 +96,10 @@ function Navbar() {
                                 </ul>}</div>
                     </li>
                     <li className='navbar_item slideInDown-4'>
-                        <a className='navbar_link' to='interests' onClick={handleShowLinks}>Interests</a>
+                        <a className='navbar_link' href='interests' onClick={handleShowLinks}>Interests</a>
                     </li>
                     <li className='navbar_item slideInDown-5'>
-                        <a className='navbar_link' to='contact' onClick={handleShowLinks}>Contact</a>
+                        <a className='navbar_link' href='contact' onClick={handleShowLinks}>Contact</a>
                     </li>
                 </ul>
                 <button className='navbar_burger' onClick={handleShowLinks}>

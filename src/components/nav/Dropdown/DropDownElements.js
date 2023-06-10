@@ -11,7 +11,7 @@ export const DropDownElements = [
     },
     {
       title: 'Projets personnels',
-      path: 'projects',
+      path: '/personnal-projects',
       cName: 'dropdown-element slideInDown-port-3',
     },
   ];

@@ -1,0 +1,14 @@
+.languages_list-interests{
+        display: flex;
+        flex-direction: column;
+        gap: 3em;
+}
+@media(max-width: 368px){
+    .languages_list-interests{
+        gap: 2em;
+}
+.margin-interests{
+    margin-bottom: 10%;
+    font-size: 1.7em;
+}
+}
