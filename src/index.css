@@ -17,8 +17,8 @@ a{
 ul{
   list-style: none;
 }
-.container_app{
-  
+li{
+  list-style: none;
 }
 .loader{
   display: flex;

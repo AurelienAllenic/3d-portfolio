@@ -84,7 +84,7 @@ function Navbar() {
                                     {DropDownElements.map((item, index) => {
                                         return (
                                             <li key={index}>
-                                                <a to={item.path}
+                                                <a href={item.path}
                                                     className='linkStyle'
                                                     onClick={handleShowLinks}
                                                 >

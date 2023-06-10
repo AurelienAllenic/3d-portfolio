@@ -64,6 +64,7 @@
 }
 .linkStyle{
     margin: 2%;
+    color: #008ab3;
 }
 
 @media screen and (max-width: 1073px) {

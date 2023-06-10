@@ -6,6 +6,8 @@ import 'aos/dist/aos.css';
 import BarLoader from "react-spinners/BarLoader";
 import {useState, useEffect} from "react"
 import Languages from "./components/Languages/Languages";
+import ReactFormation from './components/Portfolio/ReactFormation';
+import DevFormation from './components/Portfolio/DevFormation';
 
 function App() {
 
@@ -45,6 +47,13 @@ function App() {
     <Routes>
     <Route path="/languages" element={<Languages />}></Route>
     </Routes>
+    <Routes>
+    <Route path="/react-formation" element={<ReactFormation />}></Route>
+    </Routes>
+    <Routes>
+    <Route path="/dev-formation" element={<DevFormation />}></Route>
+    </Routes>
+    
    </BrowserRouter>
     </div>
     </>
