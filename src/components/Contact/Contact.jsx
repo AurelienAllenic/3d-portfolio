@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const { VITE_TEMPLATE } = import.meta.env;
 const { VITE_SERVICE } = import.meta.env;
 const { VITE_ACCOUNT } = import.meta.env;
+import ContainerMail from "./ContainerMail"
 
 const Contact = () => {
     const form = useRef();
@@ -33,6 +34,9 @@ const Contact = () => {
         <textarea id='textarea' name="message" placeholder='Your message' rows="7" required className='textarea'/>
         <button type='submit' className='btn-submit'>Send</button>
     </form>
+    <div className='position-3D-contact'>
+        <ContainerMail />
+    </div>
     </>
   )
 }

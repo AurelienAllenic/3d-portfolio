@@ -8,6 +8,15 @@
     gap: 2em;
     background-color: rgba(255, 255, 255, 0.101);
     padding: 2%;
+    z-index:5;
+}
+.position-3D-contact{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    height: 100vh;
 }
 .container_inputs{
     display: flex;
@@ -78,7 +87,7 @@
     justify-content: center;
 }
 .btn-submit:hover{
-    border-bottom: 2px solid #8acce0;
+    border: 2px solid #8acce0;
     outline: none;
     transform: scale(1.02);
     transition: all ease 0.2s;
