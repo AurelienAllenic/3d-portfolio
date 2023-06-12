@@ -10,9 +10,10 @@ import ReactFormation from './components/Portfolio/ReactFormation';
 import DevFormation from './components/Portfolio/DevFormation';
 import PersoProjects from './components/Portfolio/PersoProjects';
 import Interests from './components/Interests/Interests';
+import Contact from './components/Contact/Contact';
 
 function App() {
-
+  
   const [loading, setLoading] = useState(false)
   useEffect(()=>{
     setLoading(true)
@@ -60,6 +61,9 @@ function App() {
     </Routes>
     <Routes>
     <Route path="/interests" element={<Interests />}></Route>
+    </Routes>
+    <Routes>
+    <Route path="/contact" element={<Contact />}></Route>
     </Routes>
     
    </BrowserRouter>
