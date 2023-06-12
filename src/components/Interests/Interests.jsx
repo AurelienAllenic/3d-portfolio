@@ -1,6 +1,11 @@
 import {useState} from 'react'
 import styled from 'styled-components'
 import ContainerAtom from './ContainerAtom';
+import ContainerPiano from './ContainerPiano';
+import ContainerCard from './ContainerCard';
+import ContainerMartial from './ContainerMartial';
+import ContainerChess from './ContainerChess'
+import ContainerLanguages from './ContainerLanguages';
 import './interests.css'
 
 const data = [
@@ -50,7 +55,7 @@ font-family: "Geomanist";
 `;
 
 const Interests = () => {
-    const [language, setLanguage] = useState('Programmation')
+    const [interest, setInterest] = useState('Programmation')
 
   return (
     <section className='section-languages'>
@@ -59,14 +64,14 @@ const Interests = () => {
            <ul className='languages_list-interests'>
            {
                         data.map((item) => (
-                          <ListItem key={item} text={item} onClick={()=>setLanguage(item)}>{item}</ListItem>  
+                          <ListItem key={item} text={item} onClick={()=>setInterest(item)}>{item}</ListItem>  
                         ))
                     }
             </ul>
         </div>
         <div className='container_langages_cards'>
         {
-                 language === 'Design' ? (<ContainerAtom/>)  : language === 'Front End' ? (<ContainerAtom />) : (<ContainerAtom/>) 
+                 interest === 'Programmation' ? (<ContainerAtom/>)  : interest === 'Piano' ? (<ContainerPiano />) : interest === 'Prestidigitation' ? (<ContainerCard />) : interest === 'Echecs' ? (<ContainerChess />) : interest === 'Arts Martiaux' ? (<ContainerMartial />) : interest === 'Echecs' ? (<ContainerChess />) : (<ContainerLanguages/>) 
                 }
         </div>
         
