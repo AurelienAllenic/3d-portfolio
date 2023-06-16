@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Stage } from "@react-three/drei";
-import Globe from "./Globe"
+import DevHome from "./DevHome"
 import './home.css'
 import CV from "../../assets/CV.pdf"
 import Motivation from "../../assets/motivation.pdf"
@@ -28,7 +28,7 @@ const Home = () => {
     <Canvas className="animation-apparition">
     <Suspense fallback={null}>
       <Stage environment="city" intensity={0.5}>
-        <Globe />
+        <DevHome />
       </Stage>
       <OrbitControls enableZoom={false} autoRotate/>
     </Suspense>
