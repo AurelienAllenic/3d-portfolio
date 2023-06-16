@@ -8,7 +8,9 @@
 display: flex;
 align-items: center;
 justify-content: center;
+flex-direction: column;
 height: 100vh;
+gap: 5em;
 }
 .container-languages{
 display: flex;
@@ -17,6 +19,10 @@ align-items: center;
 justify-content: center;
 z-index: 2;
 }
+.container-two-languages{
+    display: flex;
+    width: 100%;
+}
 .container_langages_cards{
     flex:1;
     height: 400px;
@@ -24,10 +30,8 @@ z-index: 2;
     margin: 1%;
 }
 .main-title-languages{
-    position: absolute;
-    top: 15%;
     color: white;
-    font-size: 3em;
+    font-size: 4em;
 }
 .languages_list{
     display: flex;
@@ -120,8 +124,143 @@ z-index: 2;
     .description{
         font-size: 1em;
         right: 7%;
+        top: 70%;
     }
 }
+@media(max-width: 1538px){
+    .description{
+        width: 20%;
+    }
+}
+@media(max-width: 1385px){
+    .position-animation-front{
+        right: 20%;
+        bottom: 25%;
+    }
+}
+@media(max-width: 1153px){
+    .description{
+        width: 25%;
+        font-size: 0.9em;
+        top: 75%;
+    }
+}
+@media(max-width: 947px){
+    .card_front{
+        right: 15%;
+        top: 40%;
+    }
+}
+@media(max-width: 847px){
+    .card_front{
+        right: 10%;
+        top: 40%;
+    }
+    .main_title_card{
+        font-size: 1.5em;
+    }
+    .list_card li{
+        font-size: 1.1em;
+    }
+}
+@media(max-width: 830px){
+    .description{
+        width: 30%;
+        font-size: 0.85em;
+    }
+}
+@media(max-width: 701px){
+    .main-title-languages{
+        font-size: 3.5em;
+        text-align: center;
+    }
+}
+@media(max-width: 947px){
+    .main_title_card{
+        font-size: 1.4em;
+    }
+    .list_card li{
+        font-size: 1em;
+    }
+    .main-title-languages{
+        font-size: 3em;
+    }
+}
+@media(max-width: 653px){
+    .description{
+        text-align: center;
+        width: 40%;
+        font-size: 0.8em;
+    }
+}
+@media(max-width: 527px){
+    .container-two-languages{
+        flex-direction: column;
+    }
+    .container_langages_cards{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .description{
+        top: 90%;
+        width: 70%;
+        padding: 5%;
+    }
+    .card_front{
+        top: 85%;
+    }
+    .list_card{
+        gap: 1em;
+    }
+    .section-languages{
+        gap: 4em;
+    }
+    .position-animation-front{
+        height: 85%;
+        width: 70%;
+    }
+    .main-title-languages{
+        font-size: 2.5em;
+        position: absolute;
+        top: 20%;
+    }
+    .container_langages_cards{
+        width: 100%;
+    }
+}
+@media(max-width: 429px){
+    .position-animation-front{
+        width: 100%;
+        height: 100%;
+        right: 0%;
+    }
+}
+@media(max-width: 367px){
+    .main-title-languages{
+        font-size: 2.5em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 @media(max-width: 1479px){
     .description{
         font-size: 1em;
@@ -331,3 +470,4 @@ z-index: 2;
         font-size: 1em;
     }
 }
+*/

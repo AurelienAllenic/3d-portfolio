@@ -4,8 +4,8 @@ import {projects} from "../Data"
 import "./portfolio.css"
 const PersoProjects = () => {
   return (
-    <section className="container_portfolio-perso">
-    <h1 className="main-title-portfolio-perso">Some Personnal Projects</h1>
+    <section className="container_portfolio dev">
+    <h1 className="main-title-portfolio">Some Personnal Projects</h1>
       <article className="container-projects">
         <CardSectionPerso datas={projects} />
       </article>

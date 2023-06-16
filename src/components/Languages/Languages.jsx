@@ -67,6 +67,7 @@ const Languages = () => {
   return (
     <section className='section-languages'>
         <h1 className='main-title-languages'>Programming Languages</h1> 
+        <div className='container-two-languages'>
         <div className='container-languages'>
            <ul className='languages_list'>
            {
@@ -81,7 +82,7 @@ const Languages = () => {
                  language === 'Design' ? (<ContainerMac/>)  : language === 'Front End' ? (<FrontEnd />) : (<BackEnd/>) 
                 }
         </div>
-        
+        </div>
     </section>
   )
 }
