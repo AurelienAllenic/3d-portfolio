@@ -21,6 +21,7 @@ z-index: 2;
     flex:1;
     height: 400px;
     width: 50%;
+    margin: 1%;
 }
 .main-title-languages{
     position: absolute;
@@ -245,27 +246,45 @@ z-index: 2;
 @media(max-width: 368px){
 .section-languages{
     flex-direction: column;
-
+    height: auto;
 }
 .description{
     width: 65%;
-    top: 60%;
+    top: 85%;
     right: 15%;
 }
 .card_front{
-    min-width: none;
+    min-width: 0px;
     min-width: 200px;
     top: 70%;
     right: 10%;
 }
 .main-title-languages{
-    position: inherit;
-    margin-top:48%;
     font-size: 1.5em;
 }
 .languages_list{
-right: 20%;
-margin-top:45%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container_langages_cards{
+    flex:1;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.position-animation-front{
+    height: 100%;
+    bottom: 6%;
+}
+.card_front{
+    top: 90%;
+}
+.main-title-languages{
+    z-index: 1;
 }
 }
 @media(max-width: 322px){

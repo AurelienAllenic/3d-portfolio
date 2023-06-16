@@ -61,7 +61,7 @@ const Interests = () => {
     <section className='section-languages'>
         <h1 className='main-title-languages margin-interests'>Interests</h1> 
         <div className='container-languages interests-text'>
-           <ul className='languages_list-interests'>
+           <ul className='languages_list'>
            {
                         data.map((item) => (
                           <ListItem key={item} text={item} onClick={()=>setInterest(item)}>{item}</ListItem>  

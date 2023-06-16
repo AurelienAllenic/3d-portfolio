@@ -30,8 +30,19 @@ const Desc = styled.div`
 }
 @media(max-width: 368px){
     font-size: 0.67em;
-    bottom: 220px;
-    right: 10px;
+    bottom: -45%;
+    right: 40px;
+    width: 250px;
+}
+@media(max-width: 330px){
+    right: 0px;
+}
+@media(max-width: 292px){
+    width: 200px;
+}
+@media(max-width: 246px){
+    width: 150px;
+    font-size: 0.6em;
 }
 `;
 const ContainerLanguages = () => {
