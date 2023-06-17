@@ -53,6 +53,12 @@ font-family: "Geomanist";
     @media(max-width: 550px){
         font-size: 35px;
     }
+    @media(max-width: 527px) and (max-height: 614px){
+        font-size: 30px;
+    }
+    @media(max-width: 527px) and (max-height: 505px){
+        font-size: 25px;
+    }
     @media(max-width: 488px){
         font-size: 30px;
     }

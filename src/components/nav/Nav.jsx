@@ -7,7 +7,7 @@ import { AiOutlineHome } from "react-icons/ai"
 
 function Navbar() {
     const [scrollTop, setScrollTop] = useState(0);
-
+    const [showlinks, setShowlinks] = useState(false);
     const onScroll = () => {
         const winScroll = document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -37,11 +37,23 @@ function Navbar() {
             setClick(false);
         }
         else {
+            
             setDropdown(false);
             setShowlinks(false);
             setClick(true);
+            
         }
     }
+    const closeNavMob = () => {
+        const navElement = document.getElementById("nav");
+        if (!navElement.classList.contains("show-nav")) {
+          return;
+        }
+        navElement.classList.remove("show-nav");
+        setDropdown(false);
+        setShowLinks(false);
+        setClick((prevClick) => !prevClick);
+      };
     const onMouseEnter = () => {
         if (window.innerWidth < 960) {
             setDropdown(false);
@@ -57,16 +69,15 @@ function Navbar() {
         }
     };
 
-    const [showLinks, setShowlinks] = useState(false)
 
     const handleShowLinks = () => {
-        setShowlinks(!showLinks)
+        setShowlinks(!showlinks)
     }
     return (
         <>
-            <div className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
-                <a className='navbar_logo' href='home' onClick={handleShowLinks}>Aurélien Allenic</a>
-                <a className='navbar_logo_home' href='home'><AiOutlineHome /></a>
+            <div className={`navbar ${showlinks ? "show-nav" : "hide-nav"}`} id="nav">
+                <Link className='navbar_logo' to='/' onClick={handleShowLinks}>Aurélien Allenic</Link>
+                <a className='navbar_logo_home' to='/'><AiOutlineHome /></a>
                 <ul className='navbar_links'>
                     <li className='navbar_item slideInDown-1'>
                         <Link className='navbar_link' to='/' onClick={handleShowLinks}>Home</Link>
@@ -86,7 +97,7 @@ function Navbar() {
                                             <li key={index}>
                                                 <Link to={item.path}
                                                     className='linkStyle'
-                                                    onClick={handleShowLinks}
+                                                    onClick={closeNavMob}
                                                 >
                                                     <span onClick={closeBoth}>{item.title}</span>
                                                 </Link>

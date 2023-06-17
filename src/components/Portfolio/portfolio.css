@@ -84,6 +84,7 @@ flex-direction: column;
 justify-content: center;
 margin-left: 1%;
 margin-right: 1%;
+margin-top: 5%;
 }
 .container-projects{
     display: grid;
@@ -171,6 +172,11 @@ margin-right: 1%;
     .container-projects-dev > .card-single-project > .content-single-project{
         font-size: 0.9em;
     }
+    }
+    @media(max-width: 1329px){
+        .container_portfolio{
+            margin-top: 10%;
+        }
     }
     @media(max-width: 1034px){
         .container-projects-dev{

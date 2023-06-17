@@ -49,19 +49,17 @@ font-family: "Geomanist";
 @media(max-width: 1073px){
         font-size: 30px;
     }
-    @media(max-width: 847px){
-        font-size: 20px;
-    }
 `;
 
 const Interests = () => {
     const [interest, setInterest] = useState('Programmation')
 
   return (
-    <section className='section-languages'>
-        <h1 className='main-title-languages margin-interests'>Interests</h1> 
-        <div className='container-languages interests-text'>
-           <ul className='languages_list'>
+    <section className='section-interests'>
+        
+        <div className='container-interests'>
+            <h1 className='main-title-interests'>Interests</h1> 
+           <ul className='interests_list'>
            {
                         data.map((item) => (
                           <ListItem key={item} text={item} onClick={()=>setInterest(item)}>{item}</ListItem>  
@@ -69,7 +67,7 @@ const Interests = () => {
                     }
             </ul>
         </div>
-        <div className='container_langages_cards'>
+        <div className='container_animation_interests'>
         {
                  interest === 'Programmation' ? (<ContainerAtom/>)  : interest === 'Piano' ? (<ContainerPiano />) : interest === 'Prestidigitation' ? (<ContainerCard />) : interest === 'Echecs' ? (<ContainerChess />) : interest === 'Arts Martiaux' ? (<ContainerMartial />) : interest === 'Echecs' ? (<ContainerChess />) : (<ContainerLanguages/>) 
                 }
