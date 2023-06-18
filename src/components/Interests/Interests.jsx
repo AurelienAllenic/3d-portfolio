@@ -21,7 +21,7 @@ const ListItem = styled.li`
 font-size: 50px;
 cursor: pointer;
 color: transparent;
--webkit-text-stroke: 1px white;
+-webkit-text-stroke: 1px grey;
 position: relative;
 font-family: "Geomanist";
 &::after{
@@ -31,7 +31,7 @@ font-family: "Geomanist";
     left: 0;
     width: 0px;
     overflow: hidden;
-    color: white;
+    color: grey;
     white-space: nowrap;
 }
 

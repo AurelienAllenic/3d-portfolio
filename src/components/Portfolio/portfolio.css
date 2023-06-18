@@ -33,7 +33,7 @@
     border-radius: 25px;
     gap: 2em;
     width: auto;
-    min-height: 100%;
+    min-height: 300px;
     box-shadow: 0px 37px 15px -3px rgba(0,0,0,0.1);
     z-index: 1;
 }
@@ -191,7 +191,7 @@ margin-top: 5%;
             height: 250px;
         }
         .container-projects-dev >.card-single-project{
-            height: 350px;
+            min-height: 350px;
         }
         .container-projects-dev{
             margin-bottom: 10%;
@@ -324,7 +324,7 @@ margin-top: 5%;
         gap: 2em;
 }
 .container-projects-dev >.card-single-project{
-    height: 300px;
+    min-height: 300px;
 }
 .container_portfolio-dev{
     top: 90%;
@@ -377,7 +377,7 @@ margin-top: 5%;
     gap: 2em;
 }
 .container-projects-dev >.card-single-project{
-    height: 280px;
+    min-height: 280px;
     padding: 3%;
     
 }

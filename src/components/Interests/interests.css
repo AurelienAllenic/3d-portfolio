@@ -46,6 +46,12 @@
         top: 20%;
         transform: translate(-50%, -50%);
     }
+    .interests_list{
+        top: 55%;
+    }
+    .container_animation_interests{
+        top:60%;
+    }
 }
 @media(max-width: 667px) and (max-height: 674px){
     .interests_list{
@@ -55,6 +61,9 @@
         left: 50%;
         top: 25%;
         transform: translate(-50%, -50%);
+    }
+    .container_animation_interests{
+        top:70%;
     }
 }
 @media(max-width: 667px) and (max-height: 567px){
