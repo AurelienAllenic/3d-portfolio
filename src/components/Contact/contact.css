@@ -252,3 +252,30 @@ text-align: center;
     width: 90%;
 }
 }
+@media (orientation: landscape) and (max-height:720px){
+    .form{
+        margin-top: 5%;
+    }
+    .position-3D-contact{
+        margin-top: 5%;
+    }
+}
+@media (orientation: landscape) and (max-height:571px){
+    .form{
+        margin-top: 10%;
+    }
+    .position-3D-contact{
+        margin-top: 10%;
+    }
+}
+@media (orientation: landscape) and (max-height:410px){
+    .form{
+        margin-top: 20%;
+    }
+    .position-3D-contact{
+        margin-top: 20%;
+    }
+    .section-contact{
+        height: 200vh;
+    }
+}
