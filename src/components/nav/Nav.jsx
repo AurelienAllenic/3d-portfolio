@@ -28,7 +28,9 @@ function Navbar() {
     const [dropdown, setDropdown] = useState(false);
     const [click, setClick] = useState(false);
 
-    const handleClick = () => setClick(!click);
+    const handleClick = () => {
+        setClick(!click)
+    };
 
     const closeBoth = () => {
         if (click === false) {
@@ -51,7 +53,7 @@ function Navbar() {
         }
         navElement.classList.remove("show-nav");
         setDropdown(false);
-        setShowLinks(false);
+        setShowlinks(false);
         setClick((prevClick) => !prevClick);
       };
     const onMouseEnter = () => {
@@ -77,7 +79,7 @@ function Navbar() {
         <>
             <div className={`navbar ${showlinks ? "show-nav" : "hide-nav"}`} id="nav">
                 <Link className='navbar_logo' to='/' onClick={handleShowLinks}>Aurélien Allenic</Link>
-                <a className='navbar_logo_home' to='/'><AiOutlineHome /></a>
+                <Link className='navbar_logo_home' to='/'><AiOutlineHome /></Link>
                 <ul className='navbar_links'>
                     <li className='navbar_item slideInDown-1'>
                         <Link className='navbar_link' to='/' onClick={handleShowLinks}>Home</Link>

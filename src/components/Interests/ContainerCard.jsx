@@ -14,6 +14,7 @@ const ContainerCard = () => {
       <OrbitControls enableZoom={false} autoRotate />
     </Suspense>
   </Canvas>
+  <p className="description_interests">Since 2013, I've been practicing and sometimes perfoming in events</p>
   </>
   )
 }

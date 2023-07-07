@@ -9,6 +9,11 @@ const { VITE_ACCOUNT } = import.meta.env;
 import ContainerMail from "./ContainerMail"
 
 const Contact = () => {
+            /*
+        <div className='position-3D-contact'>
+            <ContainerMail />
+        </div>
+        */
     const form = useRef();
     const sendEmail = (e) => {
         e.preventDefault();
@@ -25,7 +30,7 @@ const Contact = () => {
     <section className='section-contact'>
         <form ref={form} onSubmit={sendEmail} className='form'>
             <h1 className='main-title-contact'>N'hésitez pas à me contacter</h1>
-            <h2 className='sub-title-contact'>je reviendrais vers vous dans les plus brefs délais</h2>
+            <h2 className='sub-title-contact'>je reviendrai vers vous dans les plus brefs délais</h2>
             <ToastContainer />
             <div className='container_inputs'>
                 <input id='name' type="text" name='name' placeholder='Your full name' required className='input'></input>
@@ -34,9 +39,6 @@ const Contact = () => {
             <textarea id='textarea' name="message" placeholder='Your message' rows="7" required className='textarea'/>
             <button type='submit' className='btn-submit'>Send</button>
         </form>
-        <div className='position-3D-contact'>
-            <ContainerMail />
-        </div>
     </section>
     </>
   )

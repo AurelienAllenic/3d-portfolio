@@ -14,6 +14,7 @@ const ContainerMartial = () => {
       <OrbitControls enableZoom={false} autoRotate />
     </Suspense>
   </Canvas>
+  <p className="description_interests">I studied Judo in my childhood and then, I tried wing Chun and Fut Ga</p>
   </>
   )
 }

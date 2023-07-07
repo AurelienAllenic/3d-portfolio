@@ -15,6 +15,7 @@ const ContainerAtom = () => {
       <OrbitControls enableZoom={false} autoRotate />
     </Suspense>
   </Canvas>
+  <p className="description_interests">I would like to work as a front or fullStack developer, using Reactjs and nodejs</p>
   </>
   )
 }

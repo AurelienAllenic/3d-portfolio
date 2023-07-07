@@ -13,33 +13,19 @@ const data = [
 ];
 
 const ListItem = styled.li`
-font-size: 90px;
+font-size: 70px;
 cursor: pointer;
-color: transparent;
--webkit-text-stroke: 1px #008ab3;
+color: white;
 position: relative;
 font-family: "Geomanist";
-&::after{
-    content: "${(props)=>props.text}";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0px;
-    overflow: hidden;
-    color: #008ab3;
-    white-space: nowrap;
-}
-
+background: linear-gradient(90deg, #008ab3, #55e7fc);
+text-align: center;
+width: auto;
+min-width: fit-content;
+white-space: nowrap;
+padding: 3%;
 &:hover{
-    &::after{
-        animation: moveText 0.3s linear both;
-
-        @keyframes moveText {
-            to{
-                width: 100%;
-            }
-        }
-    }
+    background: #008ab3;
 }
 @media(max-width: 1073px){
         font-size: 75px;

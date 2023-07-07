@@ -30,7 +30,7 @@ z-index: 2;
     margin: 1%;
 }
 .main-title-languages{
-    color: white;
+    color: #00829B;
     font-size: 4em;
 }
 .languages_list{
@@ -72,7 +72,7 @@ z-index: 2;
     content: "";
     height: 2px;
     width: 100px;
-    background-color: #8acce0;
+    background-color: #00829B;
     position: absolute;
     bottom: -.5em;
     display: flex;
@@ -94,7 +94,7 @@ z-index: 2;
     left: 0;
 }
 .description{
-    background-color: white;
+    background-color: rgb(248, 248, 248);
     width: 15%;
     padding: 2%;
     border-radius: 25px;
@@ -320,7 +320,7 @@ z-index: 2;
     }
     .container_langages_cards{
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }

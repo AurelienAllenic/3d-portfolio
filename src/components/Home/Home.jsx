@@ -1,10 +1,11 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Stage } from "@react-three/drei";
-import DevHome from "./DevHome"
+import DevHome from "./DevHome.jsx";
 import './home.css'
 import CV from "../../assets/CV.pdf"
 import Motivation from "../../assets/motivation.pdf"
+import Links from "./Links.jsx";
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
 <div className="container">
     <article className="container_infos">
       <h1 className="main-title">Aurélien Allenic</h1>
-      <h2 className="second-title">Web Developper</h2>
+      <h2 className="second-title">Web Developer</h2>
       
     </article>
     <div className="container-cv-letter">
@@ -24,16 +25,7 @@ const Home = () => {
             <a href={Motivation} target='_blank' className="linkHome letter" rel="noreferrer">Motivation Letter</a>
         </button>
       </div>
-    <article className="container-3D-globe" >
-    <Canvas className="animation-apparition">
-    <Suspense fallback={null}>
-      <Stage environment="city" intensity={0.5}>
-        <DevHome />
-      </Stage>
-      <OrbitControls enableZoom={false} autoRotate/>
-    </Suspense>
-  </Canvas>
-    </article>
+    <Links/>
     </div>
 </section>
   )

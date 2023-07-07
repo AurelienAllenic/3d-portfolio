@@ -1,3 +1,20 @@
+@keyframes button {
+    0%{
+        color: #ffffff;
+    }
+    25%{
+        color: #c0f4ff;
+    }50%{
+       color: #87ebff;
+    }75%{
+        color: #33c7e4;
+        
+    }100%{
+
+        color: #00829B;
+    }
+}
+
 .section-home{
 height: 100vh;
 display: flex;
@@ -29,12 +46,14 @@ justify-content: space-between;
 .main-title{
     font-size: 4em;
     /*color: rgb(0, 138, 179);*/
-    color: white;
+    color: #00829B;
+    padding: 2%;
     white-space: nowrap;
 }
 .second-title{
     font-size: 2.5em;
-    color: white;
+    color: #00829B;
+    padding: 2%;
 }
 .container-cv-letter{
     display: flex;
@@ -56,25 +75,34 @@ justify-content: space-between;
 }
 .linkHome{
     color: white;
-    font-size: 1.2em;
+    font-size: 1.5em;
     letter-spacing: 0.1em;
-    line-height: 1.5em;
+    background: linear-gradient(90deg, #008ab3, #55e7fc);
+    padding: 8% 10% 8% 10%;
+    border-radius:  5px 5px 5px 5px;
 }
-.container-3D-globe{
+.linkHome:hover{
+    background: #008ab3;
+    transform: scale(1.05);
+    transition: ease-in;
+}
+.container_links{
+    display: flex;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100vh;
-    width: 100%;
+    bottom: 2%;
+    left: 5%;
 }
-.cv:hover{
-    transform: scale(1.07);
-    transition: all smooth ease-out 1s both;
+.list_links{
+    display: flex;
+    gap: 1em;
 }
-.letter:hover{
-    transform: scale(1.07);
-    transition: all smooth ease-out 1s both;
+.link_home a{
+    color: #00829B;
+    font-size: 4.5em;
+}
+.link_home a:hover{
+    color: #33c7e4;
+    transition: all ease 0.1s both;
 }
 @media(max-width: 777px){
 .main-title{
@@ -86,6 +114,15 @@ justify-content: space-between;
 .linkHome{
     font-size: 1em;
 }
+.link_home a{
+    font-size: 3.5em;
+}
+.link_home a:hover{
+    font-size: 2em;
+}
+.cv:hover{
+    font-size: 1.2em;
+}
 }
 @media(max-width: 711px){
     .main-title{
@@ -93,5 +130,42 @@ justify-content: space-between;
     }
     .second-title{
         font-size: 1.7em;
+    }
+}
+@media(max-height: 452px){
+    .container_infos{
+       top: 65%;
+    }
+    .main-title{font-size: 2.5em;}
+    .second-title{font-size: 1.5em;}
+    .container-cv-letter{top: 75%;}
+    .container-cv-letter .btn{
+        font-size: 0.8em;
+    }
+    .link_home a{
+        font-size: 2.5em;
+    }
+    .link_home a:hover{
+        font-size: 3em;
+    }
+    .container-3D-globe{
+        top:60%;
+    }
+}
+@media(max-width: 611px) and (max-height: 323px){
+    .link_home a{
+        font-size: 1.5em;
+    }
+    .link_home a:hover{
+        font-size: 2em;
+    }
+    .main-title{
+        font-size: 2em;
+    }
+    .second-title{
+        font-size: 1.5em;
+    }
+    .container_infos{
+        gap: 1.5em;
     }
 }

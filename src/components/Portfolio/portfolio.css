@@ -18,7 +18,7 @@
     align-items: center;
 }
 .main-title-portfolio{
-    color: white;
+    color:  #00829B;
     font-size: 2em;
     margin: 5%;
     text-align: center;
@@ -28,7 +28,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 2%;
     border-radius: 25px;
     gap: 2em;
@@ -69,7 +69,7 @@ animation: sepia ease-in 1s forwards;
     border-radius: 25px;
     padding: 5%;
     white-space: nowrap;
-    color: #8acce0;
+    color: #00829B;
 }
 .link-single-project:hover{
     transform: scale(1.08);

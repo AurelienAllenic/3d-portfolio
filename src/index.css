@@ -7,8 +7,8 @@
   padding: 0;
 }
 body{
-  background: url('/back.jpg') center/cover;
   font-family: "Geomanist";
+  -webkit-tap-highlight-color: transparent;
 }
 a{
   text-decoration: none;

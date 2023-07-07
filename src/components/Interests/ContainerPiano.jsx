@@ -14,6 +14,7 @@ const ContainerPiano = () => {
       <OrbitControls enableZoom={false} autoRotate />
     </Suspense>
   </Canvas>
+  <p className="description_interests">Practicing on classical and sometimes on joe Hisaishi's music</p>
   </>
   )
 }

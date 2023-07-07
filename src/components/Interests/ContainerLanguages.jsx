@@ -13,6 +13,7 @@ const ContainerLanguages = () => {
       <OrbitControls enableZoom={false} autoRotate />
     </Suspense>
   </Canvas>
+  <p className="description_interests">I'm B2 in English, B1+ in Spanish and i have some basics of German and japanese</p>
   </>
   )
 }
