@@ -85,7 +85,7 @@ export const projects = [
     {
         id: 1,
         image: Paro,
-        title: "paroxx.com : projet de site vitrine pour l'artiste ParoXX réalisé sur la base d'un template envato en javascript",
+        title: "paroxx.com : projet de site vitrine pour l'artiste ParoXX réalisé avec ReactJs / Vite",
         demo: 'https://paroxx.com'
     },
     {
