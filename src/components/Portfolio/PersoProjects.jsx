@@ -1,15 +1,18 @@
 import React from 'react'
-import CardSectionPerso from './CardSectionPerso'
+import CardSection from './CardSection'
 import {projects} from "../Data"
 import "./portfolio.css"
 const PersoProjects = () => {
   return (
-    <section className="container_portfolio dev">
+    <>
+    <a className='anchor' id='projets-personnels'></a>
+    <section className="container_portfolio dev" id='projets-personnels'>
     <h1 className="main-title-portfolio">Some Personnal Projects</h1>
       <article className="container-projects">
-        <CardSectionPerso datas={projects} />
+        <CardSection datas={projects} />
       </article>
   </section>
+  </>
   )
 }
 

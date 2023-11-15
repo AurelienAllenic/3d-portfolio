@@ -9,12 +9,11 @@ const ContainerMac = () => {
     <Canvas>
     <Suspense fallback={null}>
       <Stage environment="city" intensity={0.6}>
-        <Mac />
+        
       </Stage>
       <OrbitControls enableZoom={false} autoRotate />
     </Suspense>
   </Canvas>
-  <p className="description">I am fully ready to design and create innovative websites!<br />Do not hesitate to take a look...</p>
   </>
   )
 }

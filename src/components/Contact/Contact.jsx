@@ -27,6 +27,7 @@ const Contact = () => {
     };
   return (
     <>
+    <a className='anchor' id='contact'></a>
     <section className='section-contact'>
         <form ref={form} onSubmit={sendEmail} className='form'>
             <h1 className='main-title-contact'>N'hésitez pas à me contacter</h1>

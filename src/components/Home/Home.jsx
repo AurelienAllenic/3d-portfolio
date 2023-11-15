@@ -1,7 +1,3 @@
-import React, { Suspense } from "react";
-import { Canvas } from "@react-three/fiber"
-import { OrbitControls, Stage } from "@react-three/drei";
-import DevHome from "./DevHome.jsx";
 import './home.css'
 import CV from "../../assets/CV.pdf"
 import Motivation from "../../assets/motivation.pdf"
@@ -9,7 +5,9 @@ import Links from "./Links.jsx";
 
 const Home = () => {
   return (
-<section id="home" className="section-home">
+    <>
+    <a className='anchor' id='home'></a>
+<section  className="section-home">
 
 <div className="container">
     <article className="container_infos">
@@ -28,6 +26,7 @@ const Home = () => {
     <Links/>
     </div>
 </section>
+</>
   )
 }
 

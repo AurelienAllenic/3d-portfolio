@@ -1,12 +1,7 @@
 import { useState } from 'react'
 import styled from 'styled-components'
-import ContainerAtom from './ContainerAtom'
-import ContainerPiano from './ContainerPiano'
-import ContainerCard from './ContainerCard'
-import ContainerMartial from './ContainerMartial'
-import ContainerChess from './ContainerChess'
-import ContainerLanguages from './ContainerLanguages'
 import './interests.css'
+import DropdownTextAbout from '../DropdownText/DropdownTextAbout'
 
 const data = [
   "Programmation",
@@ -54,91 +49,28 @@ const ListItem = styled.li`
   }
 `;
 
-const CrossButton = styled.button`
-  position: absolute;
-  top: 10%;
-  left: 80%; 
-  padding: 5px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 50px;
-  
-    color: #008ab3;
-    z-index: 1;
-  &:hover {
-    transform: scale(1.1);
-  }
-  @media (max-width: 667px) {
-    font-size: 45px;
-    top: 20%;
-  }
-  @media (max-width: 461px) {
-    font-size: 40px;
-    top: 22%;
-  }
-  @media (max-width: 414px) {
-    font-size: 35px;
-    top: 25%;
-    left: 75%;
-  }
-  @media (max-width: 350px) {
-    font-size: 30px;
-    top: 30%;
-    left: 70%;
-  }
-`;
 
 const Interests = () => {
     const [interest, setInterest] = useState(null);
-    const [showCross, setShowCross] = useState(false);
-    const [listVisible, setListVisible] = useState(true);
   
-    const handleCross = () => {
-      setShowCross(!showCross);
-      setListVisible(true);
-    }
   
-    const handleItemClick = (item) => {
-      setInterest(item);
-      setListVisible(true);
-      setShowCross(true)
-    };
   
     return (
       <>
-      <section className='section-interests'>
+    <a className='anchor' id='interests'></a>
+      <section className='section-interests' id='interests'>
         <div className='container-interests'>
           <h1 className='main-title-interests'>Interests</h1>
-          {listVisible && (
-            <ul className='interests_list' onClick={() => setListVisible(false)}>
-              {data.map((item) => (
-                <ListItem
-                  key={item}
-                  text={item}
-                  onClick={() => {
-                    handleItemClick(item);
-                    setShowCross(true);
-                  }}
-                  selected={item === interest}
-                >
-                  {item}
-                </ListItem>
-              ))}
+            <ul className='interests_list'>
+            <DropdownTextAbout datas={[{ id: 1, title: 'Programmation', content: "I would like to work as a front or fullStack developer, using Reactjs and nodejs" }]}/>
+            <DropdownTextAbout datas={[{ id: 2, title: 'Piano', content: "Practicing on classical and sometimes on joe Hisaishi's music" }]}/>
+            <DropdownTextAbout datas={[{ id: 3, title: 'Prestidigitation', content: "Since 2013, I've been practicing and sometimes perfoming in events" }]}/>
+            <DropdownTextAbout datas={[{ id: 4, title: 'Arts Martiaux', content: "I studied Judo in my childhood and then, I tried wing Chun and Fut Ga" }]}/>
+            <DropdownTextAbout datas={[{ id: 5, title: 'Echecs', content: "I learned for myself and I'm playing for fun since 2007" }]}/>
+            <DropdownTextAbout datas={[{ id: 6, title: 'Langues', content: "I'm B2 in English, B1+ in Spanish and i have some basics of German and japanese" }]}/>
             </ul>
-          )}
-          {showCross && (
-            <CrossButton onClick={() => handleCross()}>✕</CrossButton>
-          )}
         </div>
-        <div className='container_animation_interests'>
-          {interest === 'Programmation' && <ContainerAtom />}
-          {interest === 'Piano' && <ContainerPiano />}
-          {interest === 'Prestidigitation' && <ContainerCard />}
-          {interest === 'Echecs' && <ContainerChess />}
-          {interest === 'Arts Martiaux' && <ContainerMartial />}
-          {interest === 'Langues' && <ContainerLanguages />}
-        </div>
+        
       </section>
       </>
     );

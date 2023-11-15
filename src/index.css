@@ -9,6 +9,11 @@
 body{
   font-family: "Geomanist";
   -webkit-tap-highlight-color: transparent;
+  background-color: #fefefe;
+}
+section{
+  margin-top: 20%;
+  border-bottom: 1px solid #8acce0;
 }
 a{
   text-decoration: none;
@@ -28,4 +33,10 @@ li{
 }
 .animation-apparition{
   animation: apparition 1s forwards;
+}
+a.anchor {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
 }

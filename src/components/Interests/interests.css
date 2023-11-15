@@ -1,12 +1,11 @@
+.section-interests{
+    padding: 0% 0 20% 0;
+}
 .interests_list{
         display: flex;
         flex-direction: column;
-        gap: 2em;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
+        gap: 1rem;
+        margin: 0 10% 0 10%;
 }
 .container_animation_interests{
     position: absolute;
@@ -29,11 +28,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+    margin: 0 0 10% 0;
 }
 .description_interests{
     background-color: rgb(248, 248, 248);
@@ -47,75 +42,12 @@
     letter-spacing: 0.03em;
     line-height: 1.8em;
 }
-@media(max-width: 1189px){
-    .description_interests{
-        width: 20%;
-        right: 7%;
-    }
-}
-@media(max-width: 892px){
-    .description_interests{
-        width: 25%;
-        right: 5%;
-        font-size: 1em;
-    }
-}
-@media(max-width: 848px){
+@media(min-width : 769px){
     .main-title-interests{
-        font-size: 2.5em;
-    }
+    margin: 0 0 5% 0;
 }
-@media(max-width: 710px){
-    .description_interests{
-        width: 27%;
-        right: 2%;
-        font-size: 0.9em;
-    }
-}
-@media(max-width: 667px){
-    .main-title-interests{
-        left: 50%;
-        top: 20%;
-        transform: translate(-50%, -50%);
-    }
-    .container_animation_interests{
-        top:55%;
-    }
-    .interests_list{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        text-align: center;
-        top: 55%;
-        width: 100%;
-    }
-    .description_interests{
-        top: 70%;
-        width: 35%;
-    }
-}
-@media(max-width: 500px){
-    .description_interests{
-        top: 65%;
-        width: 40%;
-    }
-}
-@media(max-width: 365px){
-    .description_interests{
-        width: 50%;
-    }
-}
-@media(max-width: 292px){
-    .description_interests{
-        width: 70%;
-    }
-}
-
-@media(max-width: 368px){
-    .languages_list-interests{
-        gap: 2em;
-}
-.margin-interests{
-    margin-bottom: 10%;
-    font-size: 1.7em;
+.section-interests{
+    padding: 0 0 10% 0;
+    margin-top: 10%;
 }
 }

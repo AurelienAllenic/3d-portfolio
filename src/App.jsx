@@ -1,4 +1,3 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Navbar from './components/nav/Nav';
 import AOS from 'aos';
@@ -16,15 +15,17 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
+    setLoading(true)
     setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    AOS.init();
-  }, []);
+        setLoading(false)
+    }, 2000)
+}, [])
+useEffect(() => {
+  AOS.init();
+  
+}, [])
 
   return (
-    <Router>
       <div className="App">
         {loading ? (
           <div className="loader">
@@ -42,26 +43,25 @@ function App() {
           <>
             <div className="animation-apparition">
               <Navbar />
-              <Routes>
-                <Route exact path="/" element={<Home />} />
+                <Home />
 
-                <Route exact path="/languages" element={<Languages />} />
+                <Languages />
 
-                <Route exact path="/react-formation" element={<ReactFormation />} />
+                <ReactFormation />
 
-                <Route exact path="/dev-formation" element={<DevFormation />} />
+                <DevFormation />
 
-                <Route exact path="/personnal-projects" element={<PersoProjects />} />
+                <PersoProjects />
 
-                <Route exact path="/interests" element={<Interests />} />
+                <Interests />
 
-                <Route exact path="/contact" element={<Contact />} />
-              </Routes>
-            </div>
+                <Contact /> 
+
+                
+        </div>
           </>
         )}
       </div>
-    </Router>
   );
 }
 

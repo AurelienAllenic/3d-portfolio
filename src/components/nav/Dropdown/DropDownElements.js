@@ -1,17 +1,17 @@
 export const DropDownElements = [
     {
-      title: 'Formation React',
-      path: '/react-formation',
+      title: 'formation-react',
+      path: 'formation-react',
       cName: 'dropdown-element slideInDown-port-1',
     },
     {
-      title: 'Formation développeur Web',
-      path: '/dev-formation',
+      title: 'formation dev web',
+      path: 'formation-web',
       cName: 'dropdown-element slideInDown-port-2',
     },
     {
-      title: 'Projets personnels',
-      path: '/personnal-projects',
+      title: 'projets personnels',
+      path: 'projets-personnels',
       cName: 'dropdown-element slideInDown-port-3',
     },
   ];
