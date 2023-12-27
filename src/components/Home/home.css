@@ -14,7 +14,23 @@
         color: #00829B;
     }
 }
-
+@keyframes confirmation {
+    0%{
+        opacity: 0;
+    }25%{
+        opacity: 0.25;
+    }50%{
+        opacity: 0.5;
+    }75%{
+        opacity: 0.75;
+    }100%{
+        opacity: 1;
+    }
+}
+@keyframes hideConfirmation {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+    }
 .section-home{
 height: 100vh;
 display: flex;
@@ -105,6 +121,62 @@ margin-top: 0%;
     color: #33c7e4;
     transition: all ease 0.1s both;
 }
+/* Change languages button */
+
+.container_change_languages{
+    position: fixed;
+    top: 12%;
+    right: 1%;
+    z-index: 100;
+}
+.icon_change_languages{
+    font-size: 40px;
+}
+.icon_change_languages:hover{
+    cursor: pointer;
+}
+.button_change_languages{
+    color: #00829B;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    background-color: rgb(244, 243, 243);
+    border-radius: 15px 15px 15px 15px;
+    padding: 0.5rem;
+}
+.button_change_languages:hover{
+    transform: scale(1.1);
+    transition: all ease 1s;
+    cursor: pointer;
+}
+
+.button_change_languages:hover .icon_change_languages{
+    transform: scale(1.1);
+    color: #33c7e4;
+    transition: all ease 0.5s;
+}
+.container_confirmation_language{
+    height: 100vh;
+    width: 100%;
+    background-color: #00829B;
+    position: fixed;
+    z-index: 999999999;
+    animation: confirmation 0.5s both;
+}
+.content_confirmation_language{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+.hide-confirmation {
+    animation: hideConfirmation 0.6s both;
+}
+
 @media(max-width: 777px){
 .main-title{
     font-size: 3.5em;
@@ -131,6 +203,16 @@ margin-top: 0%;
     }
     .second-title{
         font-size: 1.7em;
+    }
+}
+@media(max-width: 650px){
+    .content_confirmation_language{
+        font-size: 2.5rem;
+    }
+}
+@media(max-width: 554px){
+    .content_confirmation_language{
+        font-size: 2rem;
     }
 }
 @media(max-height: 452px){
@@ -169,4 +251,25 @@ margin-top: 0%;
     .container_infos{
         gap: 1.5em;
     }
+}
+@media(max-width : 585px){
+   .icon_change_languages{
+    font-size: 35px;
+} 
+}
+@media(max-width : 437px){
+    .icon_change_languages{
+     font-size: 25px;
+     right: 5%;
+ }
+@media(max-width : 410px){
+    .content_confirmation_language{
+        font-size: 1.5rem;
+    }
+}
+@media(max-width : 334px){
+    .content_confirmation_language{
+        font-size: 1.2rem;
+    }
+}
 }

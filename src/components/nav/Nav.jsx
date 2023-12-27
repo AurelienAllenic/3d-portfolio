@@ -4,8 +4,10 @@ import React, { useState, useEffect } from "react";
 import { DropDownElements } from "./Dropdown/DropDownElements";
 import { AiOutlineHome } from "react-icons/ai";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { useLanguage } from '../Context/LanguageContext'
 
 function Navbar() {
+  const { language } = useLanguage();
   const [showlinks, setShowlinks] = useState(false);
   const [dropdown, setDropdown] = useState(false);
 
@@ -81,7 +83,7 @@ function Navbar() {
               duration={800}
               onClick={handleShowLinks}
             >
-              Home
+              {language === 'FR' ? 'Accueil' : 'Home'}
             </Link>
           </li>
           <li className="navbar_item slideInDown-2">
@@ -117,7 +119,7 @@ function Navbar() {
                         offset={0}
                         duration={800}
                       >
-                        <span>{item.title}</span>
+                        <span>{language === 'FR' ? item.title : item.titleEn}</span>
                       </Link>
                     </li>
                   ))}
@@ -135,7 +137,7 @@ function Navbar() {
               duration={800}
               onClick={handleShowLinks}
             >
-              Interests
+              {language === 'FR' ? 'Intérêts' :'Interests'}
             </Link>
           </li>
           <li className="navbar_item slideInDown-5">

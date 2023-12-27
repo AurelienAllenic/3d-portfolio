@@ -10,6 +10,7 @@ import DevFormation from './components/Portfolio/DevFormation';
 import PersoProjects from './components/Portfolio/PersoProjects';
 import Interests from './components/Interests/Interests';
 import Contact from './components/Contact/Contact';
+import { LanguageProvider } from './components/Context/LanguageContext';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -26,6 +27,7 @@ useEffect(() => {
 }, [])
 
   return (
+    <LanguageProvider>
       <div className="App">
         {loading ? (
           <div className="loader">
@@ -62,6 +64,7 @@ useEffect(() => {
           </>
         )}
       </div>
+      </LanguageProvider>
   );
 }
 

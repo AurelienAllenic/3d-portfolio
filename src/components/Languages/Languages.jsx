@@ -3,6 +3,7 @@ import "./languages.css";
 import styled from 'styled-components';
 import FrontEnd from './FrontEnd';
 import BackEnd from './BackEnd';
+import { useLanguage } from '../Context/LanguageContext.jsx';
 
 const data = [
   "Front End",
@@ -55,25 +56,26 @@ const ListItem = styled.li`
 `;
 
 const Languages = () => {
-  const [language, setLanguage] = useState('Front End');
+  const { language } = useLanguage();
+  const [codingLanguage, setCodingLanguage] = useState('Front End');
 
   return (
     <>
       <a className='anchor' id='languages'></a>
       <section className='section-languages'>
        
-          <h1 className='main-title-languages' data-aos="fade-top" data-aos-duration="1000">Programming Languages</h1>
+          <h1 className='main-title-languages' data-aos="fade-top" data-aos-duration="1000">{language === 'FR' ? 'Langages de Programmation' : 'Programming Languages'}</h1>
       
           <div className='container-two-languages' >
             <div className='container-languages'>
               <ul className='languages_list'>
                 {data.map((item) => (
-                  <ListItem key={item} text={item} className={language === item ? 'active' : ''} onClick={() => setLanguage(item)} >{item}</ListItem>
+                  <ListItem key={item} text={item} className={codingLanguage === item ? 'active' : ''} onClick={() => setCodingLanguage(item)} >{item}</ListItem>
                 ))}
               </ul>
             </div>
             <div className='container_langages_cards'>
-              {language === 'Front End' ? <FrontEnd /> : <BackEnd />}
+              {codingLanguage === 'Front End' ? <FrontEnd /> : <BackEnd />}
             </div>
           </div>
         

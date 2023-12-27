@@ -1,16 +1,19 @@
 export const DropDownElements = [
     {
       title: 'formation-react',
+      titleEn: 'react formation',
       path: 'formation-react',
       cName: 'dropdown-element slideInDown-port-1',
     },
     {
-      title: 'formation dev web',
+      title: 'formation développeur web',
+      titleEn: 'web development formation',
       path: 'formation-web',
       cName: 'dropdown-element slideInDown-port-2',
     },
     {
       title: 'projets personnels',
+      titleEn: 'personal projects',
       path: 'projets-personnels',
       cName: 'dropdown-element slideInDown-port-3',
     },
