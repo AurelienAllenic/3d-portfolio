@@ -22,14 +22,14 @@ const ListItem = styled.li`
   padding: 5%;
   background: ${props =>
     props.selected
-      ? '#008ab3'
-      : 'linear-gradient(90deg, #008ab3, #55e7fc)'};
+      ? '#101010'
+      : 'linear-gradient(90deg, #101010, #404040)'};
   text-align: center;
   min-width: fit-content;
 
   &:hover {
     transform: scale(1.02);
-    background: #008ab3;
+    background: #404040;
   }
 
 
@@ -64,9 +64,9 @@ const Interests = () => {
             <ul className='interests_list'>
               {language === 'FR' ?  
               <>
-            <DropdownTextAbout datas={[{ id: 1, title: 'Programmation', content: "Je souhaite travailler en tant que développeu front ou fullStack en utilisant ReactJs et nodeJs" }]}/>
+            <DropdownTextAbout datas={[{ id: 1, title: 'Programmation', content: "Je souhaite travailler en tant que développeur front ou fullStack en utilisant ReactJs et nodeJs" }]}/>
             <DropdownTextAbout datas={[{ id: 2, title: 'Piano', content: "Je pratique principalement des morceaux composés par Joe Hisaishi ainsi que des morceaux de musique classique" }]}/>
-            <DropdownTextAbout datas={[{ id: 3, title: 'Prestidigitation', content: "Depuis 2013, je pratique et parfois performelors d'évènements" }]}/>
+            <DropdownTextAbout datas={[{ id: 3, title: 'Prestidigitation', content: "Depuis 2013, je pratique et parfois performe lors d'évènements" }]}/>
             <DropdownTextAbout datas={[{ id: 4, title: 'Arts Martiaux', content: "J'ai pratiqué le judo étant enfant et j'ai depuis essayé le Wing Chun et le Fut Ga" }]}/>
             <DropdownTextAbout datas={[{ id: 5, title: 'Echecs', content: "Je pratique le jeu pour le plaisir depuis 2007" }]}/>
             <DropdownTextAbout datas={[{ id: 6, title: 'Langues', content: "Je suis B2 en anglais, B1+ en espagnol, je possède également des bases d'allemand et de japonais" }]}/> 

@@ -48,7 +48,7 @@ const FrontEnd = () => {
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />
             <Sphere args={[1, 100, 200]} scale={2.5}>
-              <MeshDistortMaterial color="#008ab3" distort={0.5} speed={1} />
+              <MeshDistortMaterial color="#101010" distort={0.5} speed={1} />
             </Sphere>
           </Canvas>
         )}

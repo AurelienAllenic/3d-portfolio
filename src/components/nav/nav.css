@@ -21,11 +21,11 @@
     min-height: 75px;
     max-height: 75px;
     background-color: #fff;
-    color: #008ab3;    
+    color: #101010;    
     z-index: 1000;
     top: 0; 
     animation: apparition 1s forwards;
-    border-bottom: 1px solid #00829B;
+    border-bottom: 1px solid #101010;
 }
 .navbar_links{
     display: flex;
@@ -41,16 +41,18 @@
 }
 .navbar_logo_home{
     visibility: hidden;
-    color: #00829B;
+    color: #101010;
 }
 .navbar_link{
     padding: 0 1rem;
     color: inherit;
-    color: #00829B;
+    color: #101010;
 }
 .navbar_link:hover{
-    color: black;
     cursor: pointer;
+    color: #404040;
+    font-size: calc(25px + 2px);
+    transition: all 0.5s;
 }
 .navbar_burger{
     width: 40px;
@@ -63,15 +65,17 @@
 .navbar_logo{
     font-size: 25px;
     padding-left: 1%;
-    color: #00829B;
+    color: #101010;
 }
 .navbar_logo:hover{
-    color: black;
+    color: #404040;
     cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.5s;
 }
 .linkStyle{
     margin: 2%;
-    color: #00829B;
+    color: #101010;
 }
 
 @media screen and (max-width: 1073px) {
@@ -141,7 +145,7 @@
         height: 3px;
         position: relative;
         border-radius: 3px;
-        background: #008ab3;
+        background: #101010;
         transition: all .5s ease-in-out;
     }
     .burger-bar::before, .burger-bar::after{

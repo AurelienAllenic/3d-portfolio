@@ -38,53 +38,53 @@
 .input{
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #8acce0;
-    color: #008ab3;
+    border-bottom: 1px solid #101010;
+    color: #101010;
     font-size: 1.2rem;
     padding: 1% 1% 1% 0%;
 }
 .input::placeholder{
-    color: #008ab3;
+    color: #101010;
 }
 .textarea{
     border: none;
     background-color: transparent;
-    border: 1px solid #8acce0;
+    border: 1px solid #101010;
     padding: 1% 1% 1% 1%;
-    color: #008ab3;
+    color: #101010;
     font-size: 1rem;
     resize: none;
     height: auto;
 }
 .textarea::placeholder{
-    color: #008ab3;
+    color: #101010;
 }
 .textarea:focus{
-    border: 2px solid #8acce0;
+    border: 2px solid #101010;
     outline: none;
     transition: all ease 0.2s;
 }
 .input:focus{
-    border-bottom: 2px solid #8acce0;
+    border-bottom: 2px solid #101010;
     outline: none;
     transition: all ease 0.2s;
 }
 .textarea:hover{
-    border: 2px solid #8acce0;
+    border: 2px solid #101010;
     outline: none;
     transition: all ease 0.2s;
     cursor: pointer;
 }
 .input:hover{
-    border-bottom: 2px solid #8acce0;
+    border-bottom: 2px solid #101010;
     outline: none;
     transition: all ease 0.2s;
     cursor: pointer;
 }
 .btn-submit{
     background-color: transparent;
-    border: 1px solid #8acce0;
-    color: #008ab3;
+    border: 1px solid #101010;
+    color: #101010;
     font-size: 1.6em;
     padding: 1%;
     display: flex;
@@ -92,13 +92,16 @@
     justify-content: center;
 }
 .btn-submit:hover{
-    border: 2px solid #8acce0;
     outline: none;
-    transition: all ease 0.2s;
+    transition: all ease 0.5s;
     cursor: pointer;
+    background-color: #101010;
+    color: white;
+    border-radius: 25px;
+    transform: scale(1.2);
 }
 .main-title-contact{
-color: #008ab3;
+color: #101010;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -107,7 +110,7 @@ letter-spacing: 0.1em;
 text-align: center;
 }
 .sub-title-contact{
-    color: #008ab3;
+    color: #101010;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -119,7 +122,7 @@ text-align: center;
 .container_confirmation_contact{
     height: 120%;
     width: 100%;
-    background-color: #00829B;
+    background-color: #101010;
     position: absolute;
     z-index: 99999999;
     animation: confirmation both;

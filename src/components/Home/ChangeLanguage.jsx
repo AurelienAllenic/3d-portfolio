@@ -10,7 +10,6 @@ const ChangeLanguage = () => {
   return (
     <div className='container_change_languages'>
       <button className='button_change_languages' onClick={toggleLanguage}>
-        <IoLanguageOutline className='icon_change_languages' />
         {language}
       </button>
     </div>

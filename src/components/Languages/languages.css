@@ -49,9 +49,10 @@ z-index: 2;
     left: 5%;
 }
 .main-title-languages{
-    color: #00829B;
+    color: #101010;
     font-size: 1.4rem;
     margin-bottom: 10%;
+    text-align: center;
 }
 .languages_list{
     display: flex;
@@ -92,7 +93,7 @@ z-index: 2;
     content: "";
     height: 2px;
     width: 60px;
-    background-color: #00829B;
+    background-color: #101010;
     position: absolute;
     bottom: -.5em;
     left: -.5em;
@@ -109,7 +110,7 @@ z-index: 2;
 .list_card li{
     margin: 5%;
     font-size: 1em;
-    color: #5fa1d7;
+    color: #101010;
     position: relative;
     top: 0;
     left: 0;

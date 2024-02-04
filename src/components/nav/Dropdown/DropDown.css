@@ -17,16 +17,18 @@
     cursor: pointer;
     padding-left: 10%;
     padding-right: 10%;
-    color: #008ab3;
+    color: #101010;
   }
   .dropdown-element{
     font-size: 25px;
   }
   .dropdown-menu li:hover{
-    color: black;
+    transition: all ease 0.5s;
+    transform: scale(1.1);
+    color: #404040;
   }
   .dropdown-menu li:hover a{
-    color: black;
+    color: #404040;
   }
   
   .dropdown-menu.clicked {
@@ -38,14 +40,14 @@
     height: 100%;
     width: 100%;
     text-decoration: none;
-    color: black;
+    color: #101010;
     padding: 16px;
   }
   @media screen and (max-width: 1073px){
     .dropdown-menu{
       position: inherit;
       gap: 0.5em;
-      border: 1px solid #008ab3;
+      border: 1px solid #101010;
       padding: 5%;
       margin-top: 7%;
       display: flex;

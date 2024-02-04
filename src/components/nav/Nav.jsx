@@ -10,7 +10,7 @@ function Navbar() {
   const { language } = useLanguage();
   const [showlinks, setShowlinks] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-
+  
   const closeDropdown = () => {
     setDropdown(false);
   };

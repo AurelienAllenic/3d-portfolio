@@ -18,11 +18,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center; /* Added to vertically center the title and arrow */
-    background-color: #09a1c0;
+    background-color: #303030;
     border-radius: 10px;
     width: 100%;
     padding: 10px 15px 10px 15px;
   }
+  .container_title_arrow_about:hover {
+    background-color: #505050;
+    cursor: pointer;
+  }
+  
   
   .container_arrow_about {
     display: flex;
@@ -66,7 +71,7 @@
   }
   
   .dropdown_content_about {
-    background-color: #09a1c0;
+    background-color: #303030;
     padding: 4% 5% 4% 5%;
     font-size: 1.2em;
     color: white;

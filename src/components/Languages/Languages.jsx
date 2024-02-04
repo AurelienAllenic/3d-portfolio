@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import FrontEnd from './FrontEnd';
 import BackEnd from './BackEnd';
 import { useLanguage } from '../Context/LanguageContext.jsx';
+import Navbar from '../nav/Nav.jsx';
 
 const data = [
   "Front End",
@@ -16,7 +17,7 @@ const ListItem = styled.li`
   color: white;
   position: relative;
   font-family: "Geomanist";
-  background: linear-gradient(90deg, #008ab3, #55e7fc);
+  background: linear-gradient(90deg, #101010, #404040);
   text-align: center;
   width: auto;
   min-width: fit-content;
@@ -24,10 +25,10 @@ const ListItem = styled.li`
   padding: 3%;
   margin-top: 5%;
   &.active {
-    background: #008ab3;
+    background: #606060;
   }
   &:hover {
-    background: #008ab3;
+    background: #404040;
   }
   @media(max-width: 1073px) {
     font-size: 75px;
@@ -61,6 +62,7 @@ const Languages = () => {
 
   return (
     <>
+    <Navbar />
       <a className='anchor' id='languages'></a>
       <section className='section-languages'>
        
