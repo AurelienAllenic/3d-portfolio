@@ -1,6 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { Suspense, useState, useRef, useEffect } from 'react';
 import { Canvas } from "@react-three/fiber";
-import { MeshDistortMaterial, Sphere, OrbitControls } from "@react-three/drei";
+import { MeshDistortMaterial, Sphere, OrbitControls, Stage } from "@react-three/drei";
+import { Atom } from './Atom';
 
 const FrontEnd = () => {
   const [isInView, setIsInView] = useState(false);
@@ -43,14 +44,14 @@ const FrontEnd = () => {
       </div>
       <div className='position-animation-front' ref={canvasRef}>
         {isInView && (
-          <Canvas id='canva'>
-            <OrbitControls enableZoom={false} />
-            <ambientLight intensity={1} />
-            <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[1, 100, 200]} scale={2.5}>
-              <MeshDistortMaterial color="#101010" distort={0.5} speed={1} />
-            </Sphere>
-          </Canvas>
+           <Canvas>
+           <Suspense fallback={null}>
+             <Stage environment="city" intensity={0.6} scale={1.5}>
+               <Atom />
+             </Stage>
+             <OrbitControls enableZoom={false} autoRotate />
+           </Suspense>
+         </Canvas>
         )}
       </div>
     </>

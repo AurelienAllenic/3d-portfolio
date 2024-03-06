@@ -9,11 +9,13 @@
 body{
   font-family: "Geomanist";
   -webkit-tap-highlight-color: transparent;
-  background-color: #fefefe;
+  color: black;
 }
 section{
   margin-top: 20%;
-  border-bottom: 1px solid #101010;
+}
+[id='no_border']{
+  border-bottom: none;
 }
 a{
   text-decoration: none;
@@ -39,4 +41,12 @@ a.anchor {
   position: relative;
   top: -80px;
   visibility: hidden;
+}
+.container_all_app{
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.scrollToTop{
+  position: absolute;
+  right: 2%;
 }

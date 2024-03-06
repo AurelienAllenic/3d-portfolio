@@ -49,10 +49,10 @@ z-index: 2;
     left: 5%;
 }
 .main-title-languages{
-    color: #101010;
     font-size: 1.4rem;
     margin-bottom: 10%;
     text-align: center;
+    text-shadow: 1.5px 1px #101010;
 }
 .languages_list{
     display: flex;
@@ -82,6 +82,10 @@ z-index: 2;
     color: black;
     letter-spacing: 0.1em;
     margin-bottom: 10%;
+    background-image: linear-gradient(90deg, #00ccff, #d500f9);
+    -webkit-background-clip: text; /* Pour les navigateurs WebKit (Chrome, Safari, Opera) */
+    background-clip: text;
+    color: transparent; /* Masque la couleur du texte d'origine */
 }
 
 .underline {
@@ -108,7 +112,8 @@ z-index: 2;
     gap: 1rem;
 }
 .list_card li{
-    margin: 5%;
+    margin: 2%;
+    text-align: center;
     font-size: 1em;
     color: #101010;
     position: relative;
@@ -189,6 +194,7 @@ z-index: 2;
     .position-animation-front{
         bottom: 25%;
     }
+
 }
 @media (min-width: 848px){
     .container_langages_cards{

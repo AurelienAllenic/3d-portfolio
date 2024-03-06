@@ -25,10 +25,10 @@ const ListItem = styled.li`
   padding: 3%;
   margin-top: 5%;
   &.active {
-    background: #606060;
+    background: linear-gradient(90deg, #00ccff, #d500f9);
   }
   &:hover {
-    background: #404040;
+    background: linear-gradient(90deg, #00ccff, #d500f9);
   }
   @media(max-width: 1073px) {
     font-size: 75px;

@@ -5,6 +5,7 @@ import { DropDownElements } from "./Dropdown/DropDownElements";
 import { AiOutlineHome } from "react-icons/ai";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useLanguage } from '../Context/LanguageContext'
+import Logo from '../../assets/logo.png'
 
 function Navbar() {
   const { language } = useLanguage();
@@ -60,7 +61,6 @@ function Navbar() {
           duration={800}
           onClick={handleShowLinks}
         >
-          Aurélien Allenic
         </Link>
         <Link
           className="navbar_logo_home"
@@ -89,6 +89,19 @@ function Navbar() {
           <li className="navbar_item slideInDown-2">
             <Link
               className="navbar_link"
+              to="cvLetter"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={800}
+              onClick={handleShowLinks}
+            >
+              Curriculum
+            </Link>
+          </li>
+          <li className="navbar_item slideInDown-3">
+            <Link
+              className="navbar_link"
               to="languages"
               spy={true}
               smooth={true}
@@ -100,7 +113,7 @@ function Navbar() {
             </Link>
           </li>
           <li
-            className="navbar_item slideInDown-3"
+            className="navbar_item slideInDown-4"
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
@@ -126,19 +139,6 @@ function Navbar() {
                 </ul>
               )}
             </div>
-          </li>
-          <li className="navbar_item slideInDown-4">
-            <Link
-              className="navbar_link"
-              to="interests"
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={800}
-              onClick={handleShowLinks}
-            >
-              {language === 'FR' ? 'Intérêts' :'Interests'}
-            </Link>
           </li>
           <li className="navbar_item slideInDown-5">
             <Link

@@ -7,18 +7,21 @@ import DevFormation from './Portfolio/DevFormation'
 import PersoProjects from './Portfolio/PersoProjects'
 import Interests from './Interests/Interests'
 import Contact from './Contact/Contact'
+import About from './About/About'
+import CvLetter from './CvLetter/CvLetter'
 
 const EntireApp = () => {
   return (
     <>
-      <Home />
-      
-      <Languages />
-      <ReactFormation />
-      <DevFormation />
-      <PersoProjects />
-      <Interests />
-      <Contact />
+      <div className='container_all_app'>
+        <About />
+        <CvLetter />
+        <Languages />
+        <ReactFormation />
+        <DevFormation />
+        <PersoProjects />
+        <Contact />
+      </div>
     </>
   )
 }

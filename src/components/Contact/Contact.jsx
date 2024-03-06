@@ -60,7 +60,7 @@ const Contact = () => {
       </div>
     )}
     <a className='anchor' id='contact'></a>
-    <section className='section-contact'>
+    <section className='section-contact' id='no_border'>
         <form ref={form} onSubmit={sendEmail} className='form'>
             <h1 className='main-title-contact'>{language === 'FR' ?  "N'hésitez pas à me contacter" : "Feel free to contact me"}</h1>
             <h2 className='sub-title-contact'>{language === 'FR' ? 'je reviendrai vers vous dans les plus brefs délais' : 'I will come back to you shortly'}</h2>

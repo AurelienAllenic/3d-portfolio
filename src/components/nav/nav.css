@@ -10,7 +10,15 @@
       opacity: 1;
     }
   }
-
+.logo{
+    width: 30%;
+    transition: all ease 0.5s;
+}
+.logo:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
 .navbar{
     display: flex;
     flex: wrap;
@@ -25,7 +33,7 @@
     z-index: 1000;
     top: 0; 
     animation: apparition 1s forwards;
-    border-bottom: 1px solid #101010;
+    box-shadow: 0px 37px 15px -3px rgba(0,0,0,0.1);
 }
 .navbar_links{
     display: flex;
@@ -47,6 +55,7 @@
     padding: 0 1rem;
     color: inherit;
     color: #101010;
+    transition: all ease-in-out 0.5s;
 }
 .navbar_link:hover{
     cursor: pointer;
@@ -66,12 +75,7 @@
     font-size: 25px;
     padding-left: 1%;
     color: #101010;
-}
-.navbar_logo:hover{
-    color: #404040;
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: all 0.5s;
+    width: 10%;
 }
 .linkStyle{
     margin: 2%;

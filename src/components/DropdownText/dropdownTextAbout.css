@@ -18,17 +18,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center; /* Added to vertically center the title and arrow */
-    background-color: #303030;
+    background-color: white;
     border-radius: 10px;
     width: 100%;
     padding: 10px 15px 10px 15px;
+    border: 1px solid black;
   }
   .container_title_arrow_about:hover {
-    background-color: #505050;
+    transform: scale(1.05);
+    transition: all ease 1s;
     cursor: pointer;
   }
-  
-  
   .container_arrow_about {
     display: flex;
     align-items: center;
@@ -36,17 +36,19 @@
   }
   
   .dropdown_title_about {
-    color: white;
+    color: black;
     margin: 0;
     font-weight: 400;
     font-size: 1.6em;
+    text-shadow: 0.5px 1px grey;
   }
   
   .container_arrow_about svg {
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 1.9em;
     animation: arrowAnim 0.7s ease forwards;
+    text-shadow: 1px 1px black;
   }
 
   .container_arrow_about:hover {
@@ -68,13 +70,15 @@
     justify-content: center;
     z-index: 1;
     position: relative;
+    box-shadow: -27px 10px 15px -3px rgba(0,0,0,0.1);
+    border: 1px solid black;
+    border-top: none;
   }
   
   .dropdown_content_about {
-    background-color: #303030;
-    padding: 4% 5% 4% 5%;
+    padding: 4% 5% 4% 10%;
     font-size: 1.2em;
-    color: white;
+    color: black;
     position: relative; 
     left: 0%;
     top: -.5rem;
@@ -88,36 +92,15 @@
   }
   @media (min-width: 386px){
     .dropdown_content_about{
-     padding: 4% 4.7% 4% 4.5%; 
-    }
-  }
-  @media (min-width: 428px){
-    .dropdown_content_about{
-     padding: 4% 4% 4% 4.5%; 
-    }
-  }
-  @media (min-width: 508px){
-    .dropdown_content_about{
-     padding: 4% 4% 4% 3%; 
+     padding: 4% 4.7% 4% 16%; 
     }
   }
   @media (min-width: 604px){
-    .dropdown_content_about{
-     padding: 4% 3% 4% 3%; 
-    }
     .dropdown_title_about{
       font-size: 1.8rem;
     }
   }
-  @media (min-width: 658px){
-    .dropdown_content_about{
-     padding: 4% 2% 4% 3%; 
-    }
-  }
   @media (min-width: 820px){
-    .dropdown_content_about{
-     padding: 4% 1% 4% 1%; 
-    }
     .dropdown_title_about{
       font-size: 2.2rem;
     }

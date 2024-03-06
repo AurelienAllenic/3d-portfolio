@@ -26,7 +26,6 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background-color: rgba(255, 255, 255, 0.101);
     padding: 2%;
     z-index:5;
 }
@@ -38,53 +37,54 @@
 .input{
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #101010;
-    color: #101010;
+    border-bottom: 1px solid black;
+    color: black;
     font-size: 1.2rem;
     padding: 1% 1% 1% 0%;
 }
 .input::placeholder{
-    color: #101010;
+    color: black;
 }
 .textarea{
     border: none;
     background-color: transparent;
-    border: 1px solid #101010;
+    border: 1px solid black;
     padding: 1% 1% 1% 1%;
-    color: #101010;
+    color: black;
     font-size: 1rem;
     resize: none;
     height: auto;
+    width: 80%;
 }
 .textarea::placeholder{
-    color: #101010;
+    color: black;
 }
 .textarea:focus{
-    border: 2px solid #101010;
+    border: 2px solid black;
     outline: none;
     transition: all ease 0.2s;
 }
 .input:focus{
-    border-bottom: 2px solid #101010;
+    border-bottom: 2px solid black;
     outline: none;
-    transition: all ease 0.2s;
+    transition: all ease 0.5s;
 }
 .textarea:hover{
-    border: 2px solid #101010;
+    border: 2px solid black;
     outline: none;
     transition: all ease 0.2s;
     cursor: pointer;
 }
 .input:hover{
-    border-bottom: 2px solid #101010;
+    border-bottom: 2px solid black;
     outline: none;
     transition: all ease 0.2s;
     cursor: pointer;
 }
 .btn-submit{
     background-color: transparent;
-    border: 1px solid #101010;
-    color: #101010;
+    border: 1px solid black;
+    color: black;
     font-size: 1.6em;
     padding: 1%;
     display: flex;
@@ -101,7 +101,7 @@
     transform: scale(1.2);
 }
 .main-title-contact{
-color: #101010;
+color: black;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -110,7 +110,7 @@ letter-spacing: 0.1em;
 text-align: center;
 }
 .sub-title-contact{
-    color: #101010;
+color: black;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -118,6 +118,7 @@ font-size: 1.2em;
 font-weight: 300;
 letter-spacing: 0.15em;
 text-align: center;
+text-shadow: 1px 1px #101010;
 }
 .container_confirmation_contact{
     height: 120%;
@@ -133,7 +134,7 @@ text-align: center;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
-    color: white;
+    color: black;
     flex-wrap: nowrap;
     white-space: nowrap;
 }

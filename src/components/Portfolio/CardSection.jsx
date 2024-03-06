@@ -1,76 +1,156 @@
- /* eslint-disable */
+import React, { useRef, useEffect, useState } from 'react';
+import "./portfolio.css";
+import { useLanguage } from '../Context/LanguageContext.jsx';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { IoMdClose, IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-    import React, { useRef, useEffect } from 'react';
-    import "./portfolio.css";
-    import { useLanguage } from '../Context/LanguageContext.jsx';
-    import { gsap } from 'gsap';
-    import { ScrollTrigger } from 'gsap/ScrollTrigger';
-    
-    gsap.registerPlugin(ScrollTrigger);
-    
-    const CardSection = ({ datas }) => {
-        const { language } = useLanguage();
-        const cardsRef = useRef([]);
-    
-        useEffect(() => {
-            ScrollTrigger.defaults({ passive: true });
-            cardsRef.current = cardsRef.current.slice(0, datas.length);
-    
-            cardsRef.current.forEach((card, index) => {
-                if (card) {
-                    gsap.fromTo(card, {
-                        autoAlpha: 0,
-                        scale: 0.5
-                    }, {
-                        autoAlpha: 1,
-                        scale: 1,
-                        duration: 1,
-                        scrollTrigger: {
-                            trigger: card,
-                            start: "top 80%",
-                            end : "bottom 20%",
-                            toggleActions: "play reverse play reverse",
+gsap.registerPlugin(ScrollTrigger);
 
-                        }
-                    });
-                }
-            });
+const CardSection = ({ datas }) => {
+    const { language } = useLanguage();
+    const cardsRef = useRef([]);
+    const [selectedCard, setSelectedCard] = useState(null); // État pour stocker la carte sélectionnée
+    const [touchPosition, setTouchPosition] = useState(null)
+    // ...
+    const handleTouchStart = (e) => {
+        const touchDown = e.touches[0].clientX
+        setTouchPosition(touchDown)
+        e.stopPropagation();
+    }
+    const handleTouchMove = (e) => {
+        const touchDown = touchPosition
     
-            // Nettoyage des instances de ScrollTrigger lors du démontage du composant
-            return () => {
-                if (ScrollTrigger) {
-                    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-                }
-            };
-        }, [datas]);
+        if(touchDown === null) {
+            return
+        }
     
-        return (
-            <>
-                {datas.map(({ id, image, title, titleEn, github, demo, figma }, index) => (
-                    <article key={id} ref={el => cardsRef.current[index] = el} className='card-single-project'>
-                        <img src={image} className='img-single-project'/>
-                        <p className='content-single-project'>{language === 'FR' ? title : titleEn}</p>
-                        <div className='container_links_portfolio'>
-                            {figma === '' ? (
-                                <>
-                                   {github !== '' && demo !== '' ? (
-    <a href={github} target="_blank" className='link-single-project'>Github</a>
-) : github !== '' ? (
-    <a href={github} target="_blank" className='link-single-project-figma'>Github</a>
-) : null}
+        const currentTouch = e.touches[0].clientX
+        const diff = touchDown - currentTouch
+    
+        if (diff > 5) {
+            handleNextCard()
+        }
+    
+        if (diff < -5) {
+            handlePrevCard()
+        }
+    
+        setTouchPosition(null)
+        e.stopPropagation();
+    }
 
 
-                                    {demo !== '' && <a href={demo} target="_blank" className='link-single-project'>{language === 'FR' ? 'Démo en direct' :'Live Demo'}</a>}
-                                </>
-                            ) : (
-                                <a href={figma} target="_blank" className='link-single-project-figma'>Figma</a>
-                            )}
-                        </div>
-                    </article>
-                ))}
-            </>
-        );
+
+    useEffect(() => {
+        ScrollTrigger.defaults({ passive: true });
+        cardsRef.current = cardsRef.current.slice(0, datas.length);
+
+        cardsRef.current.forEach((card, index) => {
+            if (card) {
+                gsap.fromTo(card, {
+                    autoAlpha: 0,
+                    scale: 0.5
+                }, {
+                    autoAlpha: 1,
+                    scale: 1,
+                    duration: 0.7,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 90%",
+                        end : "bottom 10%",
+                        toggleActions: "play reverse play reverse",
+                    }
+                });
+            }
+        });
+
+        // Nettoyage des instances de ScrollTrigger lors du démontage du composant
+        return () => {
+            if (ScrollTrigger) {
+                ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+            }
+        };
+    }, [datas]);
+
+    // Gestionnaire de clic pour ouvrir la modale
+    const handleCardClick = (index) => {
+        setSelectedCard(index); // Mettre à jour l'index de la carte sélectionnée
     };
-    
-    export default CardSection;
-    
+
+    // Gestionnaire de clic pour passer à la carte précédente
+    const handlePrevCard = () => {
+        setSelectedCard(prevState => (prevState === 0 ? datas.length - 1 : prevState - 1));
+    };
+
+    // Gestionnaire de clic pour passer à la carte suivante
+    const handleNextCard = () => {
+        setSelectedCard(prevState => (prevState === datas.length - 1 ? 0 : prevState + 1));
+    };
+
+    // Gestionnaire de clic pour fermer la modale
+    const handleCloseModal = () => {
+        setSelectedCard(null); // Réinitialiser l'état pour fermer la modale
+    };
+
+    return (
+        <>
+            {datas.map(({ id, image, title, titleEn, github, demo, figma }, index) => (
+                <article key={id} ref={el => cardsRef.current[index] = el} className='card-single-project' onClick={() => handleCardClick(index)}>
+                    <img src={image} className='img-single-project'/>
+                    <p className='content-single-project'>{language === 'FR' ? title : titleEn}</p>
+                    <div className='container_links_portfolio'>
+                        {figma === '' ? (
+                            <>
+                                {github !== '' && demo !== '' ? (
+                                    <a href={github} target="_blank" className='link-single-project'>Github</a>
+                                ) : github !== '' ? (
+                                    <a href={github} target="_blank" className='link-single-project-figma'>Github</a>
+                                ) : null}
+                                {demo !== '' && <a href={demo} target="_blank" className='link-single-project'>{language === 'FR' ? 'Démo en direct' :'Live Demo'}</a>}
+                            </>
+                        ) : (
+                            <a href={figma} target="_blank" className='link-single-project-figma'>Figma</a>
+                        )}
+                    </div>
+                </article>
+            ))}
+            
+            {/* Modale */}
+            {selectedCard !== null && (
+                <div className="modal">
+                    {/* Contenu de la modale */}
+                    <div className="modal-overlay"/>
+                    <div className="modal-content" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
+                        <button className='close_button' onClick={handleCloseModal}><IoMdClose /></button>
+                        {/* Ajoutez ici le contenu de la carte sélectionnée */}
+                        <article key={datas[selectedCard].id} className='card-single-project_modal'>
+                        <div className="arrows_img">
+                            <button className="arrow-prev" onClick={handlePrevCard}><IoIosArrowBack /></button>
+                            <img src={datas[selectedCard].image} className='img-single-project'/>
+                            <button className="arrow-next" onClick={handleNextCard}><IoIosArrowForward /></button>
+                        </div>
+                            <p className='content-single-project'>{language === 'FR' ? datas[selectedCard].title : datas[selectedCard].titleEn}</p>
+                            <div className='container_links_portfolio'>
+                                {datas[selectedCard].figma === '' ? (
+                                    <>
+                                        {datas[selectedCard].github !== '' && datas[selectedCard].demo !== '' ? (
+                                            <a href={datas[selectedCard].github} target="_blank" className='link-single-project'>Github</a>
+                                        ) : datas[selectedCard].github !== '' ? (
+                                            <a href={datas[selectedCard].github} target="_blank" className='link-single-project-figma'>Github</a>
+                                        ) : null}
+                                        {datas[selectedCard].demo !== '' && <a href={datas[selectedCard].demo} target="_blank" className='link-single-project'>{language === 'FR' ? 'Démo en direct' :'Live Demo'}</a>}
+                                    </>
+                                ) : (
+                                    <a href={datas[selectedCard].figma} target="_blank" className='link-single-project-figma'>Figma</a>
+                                )}
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            )}
+        </>
+    );
+};
+
+export default CardSection;

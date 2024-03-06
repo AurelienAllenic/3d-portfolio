@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas } from "@react-three/fiber";
-import { MeshDistortMaterial, Sphere, OrbitControls } from "@react-three/drei";
+import { MeshDistortMaterial, Sphere, OrbitControls, Stage } from "@react-three/drei";
+import { Python } from './Python';
 
 const BackEnd = () => {
   const [isInView, setIsInView] = useState(false);
@@ -36,21 +37,21 @@ const BackEnd = () => {
           <ul className='list_card'>
             <li>nodeJS</li>
             <li>MongoDb</li>
-            <li>Php</li>
-            <li>MySql</li>
+            <li>Python</li>
+            <li>Django</li>
           </ul>
         </div>
       </div>
       <div className='position-animation-front' ref={canvasRef}>
         {isInView && (
-          <Canvas id='canva'>
-            <OrbitControls enableZoom={false} />
-            <ambientLight intensity={1} />
-            <directionalLight position={[3, 2, 1]} />
-            <Sphere args={[1, 100, 200]} scale={2.5}>
-              <MeshDistortMaterial color="#093542" distort={0.5} speed={1} />
-            </Sphere>
-          </Canvas>
+          <Canvas>
+          <Suspense fallback={null}>
+            <Stage environment="city" intensity={0.6} scale={1.5}>
+              <Python />
+            </Stage>
+            <OrbitControls enableZoom={false} autoRotate />
+          </Suspense>
+        </Canvas>
         )}
       </div>
     </>

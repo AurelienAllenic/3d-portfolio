@@ -22,13 +22,14 @@
     transform: translate(-50%, -50%);
 }
 .main-title-interests{
-    color: #101010;
+    color: black;
     font-size: 4em;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     margin: 0 0 10% 0;
+    text-shadow: 1px 1px #101010;
 }
 .description_interests{
     background-color: rgb(248, 248, 248);
