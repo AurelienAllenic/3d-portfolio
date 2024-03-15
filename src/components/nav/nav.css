@@ -11,7 +11,7 @@
     }
   }
 .logo{
-    width: 30%;
+    width: 40%;
     transition: all ease 0.5s;
 }
 .logo:hover{
@@ -76,6 +76,9 @@
     padding-left: 1%;
     color: #101010;
     width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .linkStyle{
     margin: 2%;

@@ -5,7 +5,6 @@ import { DropDownElements } from "./Dropdown/DropDownElements";
 import { AiOutlineHome } from "react-icons/ai";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { useLanguage } from '../Context/LanguageContext'
-import Logo from '../../assets/logo.png'
 
 function Navbar() {
   const { language } = useLanguage();

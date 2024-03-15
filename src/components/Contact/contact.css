@@ -34,6 +34,15 @@
     flex-direction: column;
     gap: 2rem;
 }
+.container_single_input{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.error{
+    color: red;
+    text-align: center;
+}
 .input{
     background-color: transparent;
     border: none;
@@ -193,6 +202,14 @@ text-shadow: 1px 1px #101010;
     .container_inputs{
         flex-direction: row;
     }
+    .container_single_input{
+        position: relative;
+    }
+    .error{
+        position: absolute;
+        bottom: 140%;
+    }
+
 }
 @media(min-width: 1207px){
     .input{

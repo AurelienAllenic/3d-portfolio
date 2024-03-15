@@ -1,6 +1,6 @@
 import React from 'react'
 import IMG from '../../assets/about.jpg'
-import './about.css'
+import './about.scss'
 import { useLanguage } from '../Context/LanguageContext.jsx';
 import ChangeLanguage from '../Home/ChangeLanguage.jsx';
 import Logos from '../Home/Logos.jsx';
