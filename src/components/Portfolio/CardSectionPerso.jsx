@@ -1,7 +1,7 @@
  /* eslint-disable */
 
 import React from 'react'
-import "./portfolio.css"
+import "./portfolio.scss"
 
 const CardSectionPerso = ({ datas }) => {
     return (

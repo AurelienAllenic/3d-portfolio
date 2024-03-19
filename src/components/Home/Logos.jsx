@@ -7,6 +7,7 @@ import { FaReact } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
 import { SiDjango } from "react-icons/si";
+import { FaSass } from "react-icons/fa";
 
 const Logos = () => {
   return (
@@ -19,6 +20,10 @@ const Logos = () => {
         <figure>
           <IoLogoCss3 fill='#264DE4' />
           <figcaption>CSS</figcaption>
+        </figure>
+        <figure>
+          <FaSass fill='#d49cb4' />
+          <figcaption>Sass</figcaption>
         </figure>
         <figure>
           <SiJavascript fill='#F7DF1E' />

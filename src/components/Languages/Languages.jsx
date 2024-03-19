@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import "./languages.css";
+import "./languages.scss";
 import styled from 'styled-components';
 import FrontEnd from './FrontEnd';
 import BackEnd from './BackEnd';
@@ -69,15 +69,10 @@ const Languages = () => {
           <h1 className='main-title-languages' data-aos="fade-top" data-aos-duration="1000">{language === 'FR' ? 'Langages de Programmation' : 'Programming Languages'}</h1>
       
           <div className='container-two-languages' >
-            <div className='container-languages'>
-              <ul className='languages_list'>
-                {data.map((item) => (
-                  <ListItem key={item} text={item} className={codingLanguage === item ? 'active' : ''} onClick={() => setCodingLanguage(item)} >{item}</ListItem>
-                ))}
-              </ul>
-            </div>
+            
+            
             <div className='container_langages_cards'>
-              {codingLanguage === 'Front End' ? <FrontEnd /> : <BackEnd />}
+              {codingLanguage === 'Front End' ? <FrontEnd setCodingLanguage={setCodingLanguage}/> : <BackEnd setCodingLanguage={setCodingLanguage}/>}
             </div>
           </div>
         

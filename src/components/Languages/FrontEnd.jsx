@@ -2,15 +2,16 @@ import React, { Suspense, useState, useRef, useEffect } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, Sphere, OrbitControls, Stage } from "@react-three/drei";
 import { Atom } from './Atom';
+import { FaArrowRight } from "react-icons/fa";
 
-const FrontEnd = () => {
+const FrontEnd = ({ setCodingLanguage }) => {
   const [isInView, setIsInView] = useState(false);
   const canvasRef = useRef();
 
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: '0px',
+      rootMargin: '100px',
       threshold: 0.5,
     };
 
@@ -32,7 +33,10 @@ const FrontEnd = () => {
   return (
     <>
       <div className='card_front' >
-        <h1 className='main_title_card underline'>Front End</h1>
+        <div className='container_title_button'>
+          <h1 className='main_title_card underline'>Front End</h1>
+          <button className='btn_card' onClick={() => setCodingLanguage('Back End')}>Back End<FaArrowRight /></button>
+        </div>
         <div className='container_list_dev'>
           <ul className='list_card'>
             <li>HTML/CSS</li>

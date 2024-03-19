@@ -1,6 +1,6 @@
 import { openclassrooms1 } from "../Data"
 import CardSection from './CardSection'
-import "./portfolio.css"
+import "./portfolio.scss"
 import { useLanguage } from '../Context/LanguageContext.jsx';
 
 const DevFormation = () => {

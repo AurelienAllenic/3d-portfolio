@@ -1,5 +1,5 @@
 import React from 'react';
-import './cvLetter.css';
+import './cvLetter.scss';
 import CV from '../../assets/cv.png';
 import CVPDF from '../../assets/CV.pdf';
 import Motivation from '../../assets/motivation.png';

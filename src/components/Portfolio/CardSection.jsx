@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import "./portfolio.css";
+import "./portfolio.scss";
 import { useLanguage } from '../Context/LanguageContext.jsx';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -10,9 +10,10 @@ gsap.registerPlugin(ScrollTrigger);
 const CardSection = ({ datas }) => {
     const { language } = useLanguage();
     const cardsRef = useRef([]);
-    const [selectedCard, setSelectedCard] = useState(null); // État pour stocker la carte sélectionnée
     const [touchPosition, setTouchPosition] = useState(null)
-    // ...
+    const [selectedCard, setSelectedCard] = useState(null);
+    const [cardPosition, setCardPosition] = useState({ x: 0, y: 0 });
+
     const handleTouchStart = (e) => {
         const touchDown = e.touches[0].clientX
         setTouchPosition(touchDown)
@@ -24,23 +25,21 @@ const CardSection = ({ datas }) => {
         if(touchDown === null) {
             return
         }
-    
+
         const currentTouch = e.touches[0].clientX
         const diff = touchDown - currentTouch
-    
+
         if (diff > 5) {
             handleNextCard()
         }
-    
+
         if (diff < -5) {
             handlePrevCard()
         }
-    
+
         setTouchPosition(null)
         e.stopPropagation();
     }
-
-
 
     useEffect(() => {
         ScrollTrigger.defaults({ passive: true });
@@ -57,7 +56,7 @@ const CardSection = ({ datas }) => {
                     duration: 0.7,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 90%",
+                        start: "top 80%",
                         end : "bottom 10%",
                         toggleActions: "play reverse play reverse",
                     }
@@ -90,13 +89,21 @@ const CardSection = ({ datas }) => {
 
     // Gestionnaire de clic pour fermer la modale
     const handleCloseModal = () => {
-        setSelectedCard(null); // Réinitialiser l'état pour fermer la modale
+        setSelectedCard(null);
+    };
+
+    const handleCardHover = (card) => {
+        gsap.to(card, { scale: 1.1, duration: 0.3 });
+    };
+
+    const handleCardHoverEnd = (card) => {
+        gsap.to(card, { scale: 1, duration: 0.5 });
     };
 
     return (
         <>
             {datas.map(({ id, image, title, titleEn, github, demo, figma }, index) => (
-                <article key={id} ref={el => cardsRef.current[index] = el} className='card-single-project' onClick={() => handleCardClick(index)}>
+                <article key={id} ref={el => cardsRef.current[index] = el} className='card-single-project' onClick={() => handleCardClick(index)} onMouseEnter={() => handleCardHover(cardsRef.current[index])} onMouseLeave={() => handleCardHoverEnd(cardsRef.current[index])}>
                     <img src={image} className='img-single-project'/>
                     <p className='content-single-project'>{language === 'FR' ? title : titleEn}</p>
                     <div className='container_links_portfolio'>

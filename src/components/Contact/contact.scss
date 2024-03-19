@@ -39,10 +39,6 @@
     flex-direction: column;
     gap: 1.5rem;
 }
-.error{
-    color: red;
-    text-align: center;
-}
 .input{
     background-color: transparent;
     border: none;
@@ -50,9 +46,20 @@
     color: black;
     font-size: 1.2rem;
     padding: 1% 1% 1% 0%;
-}
-.input::placeholder{
-    color: black;
+    &::placeholder{
+        color: black;
+    }
+    &:focus{
+        border-bottom: 2px solid black;
+        outline: none;
+        transition: all ease 0.5s;
+    }
+    &:hover{
+        border-bottom: 2px solid black;
+        outline: none;
+        transition: all ease 0.2s;
+        cursor: pointer;
+    }
 }
 .textarea{
     border: none;
@@ -64,50 +71,46 @@
     resize: none;
     height: auto;
     width: 80%;
-}
-.textarea::placeholder{
-    color: black;
-}
-.textarea:focus{
-    border: 2px solid black;
-    outline: none;
-    transition: all ease 0.2s;
-}
-.input:focus{
-    border-bottom: 2px solid black;
-    outline: none;
-    transition: all ease 0.5s;
-}
-.textarea:hover{
-    border: 2px solid black;
-    outline: none;
-    transition: all ease 0.2s;
-    cursor: pointer;
-}
-.input:hover{
-    border-bottom: 2px solid black;
-    outline: none;
-    transition: all ease 0.2s;
-    cursor: pointer;
+    &::placeholder{
+        color: black;
+    }
+    &:focus{
+        border: 2px solid black;
+        outline: none;
+        transition: all ease 0.2s;
+    }
+    &:hover{
+        border: 2px solid black;
+        outline: none;
+        transition: all ease 0.2s;
+        cursor: pointer;
+    }
 }
 .btn-submit{
     background-color: transparent;
     border: 1px solid black;
     color: black;
-    font-size: 1.6em;
-    padding: 1%;
+    font-size: 1.2rem;
+    padding: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.btn-submit:hover{
-    outline: none;
-    transition: all ease 0.5s;
-    cursor: pointer;
-    background-color: #101010;
-    color: white;
-    border-radius: 25px;
-    transform: scale(1.2);
+    gap: 1rem;
+    border-radius: 15px;
+    animation: button_languages 0.7s ease-out infinite alternate;
+    transition: all ease 0.3s;
+    &:hover{
+        outline: none;
+        transition: all ease 0.5s;
+        cursor: pointer;
+        background-color: #101010;
+        color: white;
+        svg{
+            animation: arrow_languages 0.5s ease;
+            transition: all ease 0.9s;
+            fill: white;
+        }
+    }
 }
 .main-title-contact{
 color: black;
@@ -127,7 +130,6 @@ font-size: 1.2em;
 font-weight: 300;
 letter-spacing: 0.15em;
 text-align: center;
-text-shadow: 1px 1px #101010;
 }
 .container_confirmation_contact{
     height: 120%;
@@ -158,6 +160,10 @@ text-shadow: 1px 1px #101010;
         width: 350px;
         font-size: 1.2rem;
     }
+    .btn-submit{
+        padding: 2%;
+        font-size: 1.3rem;
+    }
 }
 @media(min-width: 720px){
     .input{
@@ -186,6 +192,11 @@ text-shadow: 1px 1px #101010;
     .main-title-contact{
         font-size: 1.5rem;
     }
+    .btn-submit{
+        padding: 1.5%;
+        gap: 0.5rem;
+        font-size: 1.5rem;
+    }
 }
 @media(min-width: 1036px){
     .input{
@@ -209,7 +220,11 @@ text-shadow: 1px 1px #101010;
         position: absolute;
         bottom: 140%;
     }
-
+    .btn-submit{
+        padding: 1%;
+        gap: 0.5rem;
+        font-size: 1.7rem;
+    }
 }
 @media(min-width: 1207px){
     .input{

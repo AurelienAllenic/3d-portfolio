@@ -1,9 +1,10 @@
 import React,  {useRef, useEffect, useState} from 'react'
-import './contact.css'
+import './contact.scss'
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useLanguage } from '../Context/LanguageContext.jsx';
+import { FaArrowRight } from "react-icons/fa";
 
 const { VITE_TEMPLATE } = import.meta.env;
 const { VITE_SERVICE } = import.meta.env;
@@ -70,7 +71,7 @@ const Contact = () => {
                 <input id='email' type="email" name='email' placeholder={language === 'FR' ? 'Votre Email': 'Your Email'} required className='input'></input>
             </div>
             <textarea id='textarea' name="message" placeholder={language === 'FR' ? 'Votre message': 'Your message'} rows="7" required className='textarea'/>
-            <button type='submit' className='btn-submit'>{language === 'FR' ? 'Envoyer': 'Send'}</button>
+            <button type='submit' className='btn-submit'>{language === 'FR' ? 'Envoyer': 'Send'}<FaArrowRight /></button>
         </form>
     </section>
     </>

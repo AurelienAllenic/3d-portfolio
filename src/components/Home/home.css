@@ -253,7 +253,7 @@ font-size: 2rem;
   
   .logos figcaption {
     position: absolute;
-    bottom: -4rem;
+    bottom: -3rem;
     opacity: 0;
     transition: opacity 0.3s ease;
     font-size: 1rem;
@@ -386,7 +386,7 @@ font-size: 2rem;
     flex-direction: column;
 }
 } 
-@media(max-width : 461px){
+@media(max-width : 514px){
 
     .logos figcaption {
         font-size: 0rem;
@@ -402,7 +402,7 @@ font-size: 2rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 10% 0 10% 0;
+        padding: 10% 0 15% 0;
       }
       .link_home a {
         font-size: 4rem;

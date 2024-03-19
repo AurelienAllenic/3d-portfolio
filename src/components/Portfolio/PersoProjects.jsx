@@ -1,7 +1,7 @@
 import React from 'react'
 import CardSection from './CardSection'
 import {projects} from "../Data"
-import "./portfolio.css"
+import "./portfolio.scss"
 import { useLanguage } from '../Context/LanguageContext.jsx';
 const PersoProjects = () => {
   const { language } = useLanguage();
