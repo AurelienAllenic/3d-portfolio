@@ -1,23 +1,12 @@
-@keyframes apparition {
-    0%{
-      display: none;
-      opacity: 0;
-    }
-    50%{
-      display: inherit;
-    }
-    100%{
-      opacity: 1;
-    }
-  }
+
 .logo{
     width: 40%;
     transition: all ease 0.5s;
-}
-.logo:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: all 0.5s ease;
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+    }
 }
 .navbar{
     display: flex;
@@ -56,12 +45,12 @@
     color: inherit;
     color: #101010;
     transition: all ease-in-out 0.5s;
-}
-.navbar_link:hover{
-    cursor: pointer;
-    color: #404040;
-    font-size: calc(25px + 2px);
-    transition: all 0.5s;
+    &:hover{
+        cursor: pointer;
+        color: #404040;
+        font-size: calc(25px + 2px);
+        transition: all 0.5s;
+    }
 }
 .navbar_burger{
     width: 40px;
@@ -84,7 +73,6 @@
     margin: 2%;
     color: #101010;
 }
-
 @media screen and (max-width: 1073px) {
     .navbar{
         min-height: 65px;

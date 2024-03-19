@@ -1,6 +1,6 @@
-// LanguageContext.js
+/* eslint-disable */
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import '../Home/home.css'
+import '../About/buttons_about.scss'
 
 const LanguageContext = createContext();
 
@@ -23,14 +23,14 @@ export const LanguageProvider = ({ children }) => {
     if (showConfirmation && !hideConfirmation) {
       timer = setTimeout(() => {
         setHideConfirmation(true);
-      }, 1500); // Durée d'affichage avant de commencer à disparaître
+      }, 1500);
     }
 
     if (hideConfirmation) {
       timer = setTimeout(() => {
         setShowConfirmation(false);
         setHideConfirmation(false);
-      }, 500); // Durée de l'animation de disparition
+      }, 500);
     }
 
     return () => clearTimeout(timer);
@@ -40,14 +40,14 @@ export const LanguageProvider = ({ children }) => {
 
   return (
     <>
-    {showConfirmation && (
-      <div className={confirmationClass}>
-        <p className='content_confirmation_language'>{language === 'FR' ? 'Langue mise à jour : Français' : 'Language changed : English'}</p>
-      </div>
-    )}
-    <LanguageContext.Provider value={{ language, toggleLanguage }}>
-      {children}
-    </LanguageContext.Provider>
+      {showConfirmation && (
+        <div className={confirmationClass}>
+          <p className='content_confirmation_language'>{language === 'FR' ? 'Langue mise à jour : Français' : 'Language changed : English'}</p>
+        </div>
+      )}
+      <LanguageContext.Provider value={{ language, toggleLanguage }}>
+        {children}
+      </LanguageContext.Provider>
     </>
   );
 };

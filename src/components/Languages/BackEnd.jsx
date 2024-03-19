@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, Sphere, OrbitControls, Stage } from "@react-three/drei";
@@ -33,10 +34,10 @@ const BackEnd = ({ setCodingLanguage }) => {
   return (
     <>
       <div className='card_front'>
-      <div className='container_title_button'>
-        <h1 className='main_title_card underline'>Back End</h1>
-        <button className='btn_card' onClick={() => setCodingLanguage('Front End')}>Front End<FaArrowRight /></button>
-      </div>
+        <div className='container_title_button'>
+          <h1 className='main_title_card underline'>Back End</h1>
+          <button className='btn_card' onClick={() => setCodingLanguage('Front End')}>Front End<FaArrowRight /></button>
+        </div>
         <div className='container_list_dev'>
           <ul className='list_card'>
             <li>nodeJS</li>

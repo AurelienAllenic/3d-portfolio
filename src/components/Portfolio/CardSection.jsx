@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useRef, useEffect, useState } from 'react';
 import "./portfolio.scss";
 import { useLanguage } from '../Context/LanguageContext.jsx';
@@ -122,15 +123,12 @@ const CardSection = ({ datas }) => {
                     </div>
                 </article>
             ))}
-            
             {/* Modale */}
             {selectedCard !== null && (
                 <div className="modal">
-                    {/* Contenu de la modale */}
                     <div className="modal-overlay"/>
                     <div className="modal-content" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
                         <button className='close_button' onClick={handleCloseModal}><IoMdClose /></button>
-                        {/* Ajoutez ici le contenu de la carte sélectionnée */}
                         <article key={datas[selectedCard].id} className='card-single-project_modal'>
                         <div className="arrows_img">
                             <button className="arrow-prev" onClick={handlePrevCard}><IoIosArrowBack /></button>

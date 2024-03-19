@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import './cvLetter.scss';
 import CV from '../../assets/cv.png';

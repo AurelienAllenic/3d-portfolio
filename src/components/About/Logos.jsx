@@ -1,5 +1,5 @@
+/* eslint-disable */
 import React from 'react';
-import './home.css';
 import { ImHtmlFive } from "react-icons/im";
 import { IoLogoCss3 } from "react-icons/io5";
 import { SiJavascript } from "react-icons/si";

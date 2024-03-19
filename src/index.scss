@@ -12,6 +12,18 @@ body{
   -webkit-tap-highlight-color: transparent;
   color: black;
 }
+@keyframes apparition {
+  0%{
+    display: none;
+    opacity: 0;
+  }
+  50%{
+    display: inherit;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 section{
   margin-top: 20%;
 }
@@ -40,7 +52,7 @@ li{
 a.anchor {
   display: block;
   position: relative;
-  top: -80px;
+  top: 0px;
   visibility: hidden;
 }
 .container_all_app{
@@ -50,4 +62,36 @@ a.anchor {
 .scrollToTop{
   position: absolute;
   right: 2%;
+}
+@keyframes hideConfirmation {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+  }
+@keyframes moveText {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes languages {
+  from {
+    width: 0%;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 0;
+  }
+}
+@keyframes button_languages {
+  to {
+          transform: scale(1.08);
+          transition: all smooth 1s;
+  }
+}
+@keyframes arrow_languages {
+  to {
+          transform: rotate(360deg);
+          transition: all ease 1s;
+  }
 }

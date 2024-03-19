@@ -1,41 +1,10 @@
-@keyframes moveText {
-    to {
-      width: 100%;
-    }
-  }
-  
-  @keyframes languages {
-    from {
-      width: 0%;
-      opacity: 0;
-    }
-    to {
-      width: 100%;
-      opacity: 0;
-    }
-  }
-  @keyframes button_languages {
-    to {
-            transform: scale(1.08);
-            transition: all smooth 1s;
-    }
-  }
-  @keyframes arrow_languages {
-    to {
-            transform: rotate(360deg);
-            transition: all ease 1s;
-    }
-  }
-
-
-  
   .section-languages {
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 0rem;
     height: 56vh;
-    margin-top: 20%;
+    margin-top: 10%;
   
     .container-languages {
       display: flex;
@@ -286,6 +255,9 @@
       .position-animation-front {
         margin-top: 17%;
       }
+      .container-two-languages {
+        margin-top: 10%;
+      }
     }
   
     @media (min-width: 1386px) {
@@ -294,6 +266,9 @@
       }
       .container_title_button{
         gap: 1.5rem;
+      }
+      .section-languages .container-two-languages{
+        margin-top: 0%;
       }
     }
   

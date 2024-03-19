@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React,  {useRef, useEffect, useState} from 'react'
 import './contact.scss'
 import emailjs from '@emailjs/browser';
@@ -17,20 +18,19 @@ const Contact = () => {
 
     useEffect(() => {
         let timer;
-    
         if (showConfirmation && !hideConfirmation) {
           timer = setTimeout(() => {
             setHideConfirmation(true);
-          }, 2500); // Durée d'affichage avant de commencer à disparaître
+          }, 2500);
         }
-    
+
         if (hideConfirmation) {
           timer = setTimeout(() => {
             setShowConfirmation(false);
             setHideConfirmation(false);
-          }, 500); // Durée de l'animation de disparition
+          }, 500);
         }
-    
+
         return () => clearTimeout(timer);
       }, [showConfirmation, hideConfirmation]);
     
@@ -46,23 +46,23 @@ const Contact = () => {
             setShowConfirmation(true);
             setHideConfirmation(false);
           }, (error) => {
-            console.log(error.text); // ou toute autre gestion de l'erreur
+            console.log(error.text);
             setIsError(true);
           });
 
         e.target.reset();
-        
     };
+
   return (
     <>
-    {showConfirmation && (
-      <div className={confirmationClass}>
-        <p className='content_confirmation_language'>{isError ? language === 'FR' ? 'Message non envoyé !' : 'Message not sent !' : language === 'FR' ? 'Message envoyé !' : 'Message Sent !'}</p>
-      </div>
-    )}
-    <a className='anchor' id='contact'></a>
-    <section className='section-contact' id='no_border'>
-        <form ref={form} onSubmit={sendEmail} className='form'>
+      {showConfirmation && (
+        <div className={confirmationClass}>
+          <p className='content_confirmation_language'>{isError ? language === 'FR' ? 'Message non envoyé !' : 'Message not sent !' : language === 'FR' ? 'Message envoyé !' : 'Message Sent !'}</p>
+        </div>
+      )}
+      <a className='anchor' id='contact'></a>
+      <section className='section-contact' id='no_border'>
+          <form ref={form} onSubmit={sendEmail} className='form'>
             <h1 className='main-title-contact'>{language === 'FR' ?  "N'hésitez pas à me contacter" : "Feel free to contact me"}</h1>
             <h2 className='sub-title-contact'>{language === 'FR' ? 'je reviendrai vers vous dans les plus brefs délais' : 'I will come back to you shortly'}</h2>
             <ToastContainer />
@@ -72,8 +72,8 @@ const Contact = () => {
             </div>
             <textarea id='textarea' name="message" placeholder={language === 'FR' ? 'Votre message': 'Your message'} rows="7" required className='textarea'/>
             <button type='submit' className='btn-submit'>{language === 'FR' ? 'Envoyer': 'Send'}<FaArrowRight /></button>
-        </form>
-    </section>
+          </form>
+      </section>
     </>
   )
 }

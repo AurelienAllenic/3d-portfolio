@@ -1,14 +1,12 @@
+/* eslint-disable */
 import React from 'react'
 import IMG from '../../assets/about.jpg'
 import './about.scss'
+import './buttons_about.scss'
 import { useLanguage } from '../Context/LanguageContext.jsx';
-import ChangeLanguage from '../Home/ChangeLanguage.jsx';
-import Logos from '../Home/Logos.jsx';
-import Links from '../Home/Links.jsx';
-import CV from '../../assets/cv.png';
-import CVPDF from '../../assets/CV.pdf';
-import Motivation from '../../assets/motivation.png';
-import MotivationPDF from '../../assets/motivation.pdf';
+import ChangeLanguage from './ChangeLanguage.jsx';
+import Logos from './Logos.jsx';
+import Links from './Links.jsx';
 
 const About = () => {
     const { language } = useLanguage();

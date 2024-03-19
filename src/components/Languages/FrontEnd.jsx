@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { Suspense, useState, useRef, useEffect } from 'react';
 import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, Sphere, OrbitControls, Stage } from "@react-three/drei";
@@ -48,14 +49,14 @@ const FrontEnd = ({ setCodingLanguage }) => {
       </div>
       <div className='position-animation-front' ref={canvasRef}>
         {isInView && (
-           <Canvas>
-           <Suspense fallback={null}>
-             <Stage environment="city" intensity={0.6} scale={1.5}>
-               <Atom />
-             </Stage>
-             <OrbitControls enableZoom={false} autoRotate />
-           </Suspense>
-         </Canvas>
+          <Canvas>
+          <Suspense fallback={null}>
+            <Stage environment="city" intensity={0.6} scale={1.5}>
+              <Atom />
+            </Stage>
+            <OrbitControls enableZoom={false} autoRotate />
+          </Suspense>
+        </Canvas>
         )}
       </div>
     </>

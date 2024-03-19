@@ -5,7 +5,7 @@ License: CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 Source: https://sketchfab.com/3d-models/react-logo-76174ceeba96487f9863f974636f641e
 Title: React logo
 */
-
+/* eslint-disable */
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
@@ -29,4 +29,3 @@ export function Atom(props) {
 }
 
 useGLTF.preload("/atom.gltf");
-

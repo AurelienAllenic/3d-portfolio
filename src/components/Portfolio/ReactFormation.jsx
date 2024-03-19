@@ -7,13 +7,13 @@ const ReactFormation = () => {
   const { language } = useLanguage();
   return (
     <>
-    <a className='anchor' id='formation-react'></a>
-    <section className="container_portfolio margin" id="formation-react">
-      <h1 className="main-title-portfolio">{language === 'FR' ? 'Projets - formation React - Openclassrooms' : 'Projects - React formation - Openclassrooms'}</h1>
-        <article className="container-projects" >
-          <CardSection datas={openclassrooms2} />
-        </article>
-    </section>
+      <a className='anchor' id='formation-react'></a>
+      <section className="container_portfolio margin" id="formation-react">
+        <h1 className="main-title-portfolio">{language === 'FR' ? 'Projets - formation React - Openclassrooms' : 'Projects - React formation - Openclassrooms'}</h1>
+          <article className="container-projects" >
+            <CardSection datas={openclassrooms2} />
+          </article>
+      </section>
     </>
   )
 }

@@ -1,8 +1,7 @@
-// ChangeLanguage.jsx
+/* eslint-disable */
 import React from 'react';
 import { IoLanguageOutline } from 'react-icons/io5';
 import { useLanguage } from '../Context/LanguageContext';
-import './home.css';
 
 const ChangeLanguage = () => {
   const { language, toggleLanguage } = useLanguage();

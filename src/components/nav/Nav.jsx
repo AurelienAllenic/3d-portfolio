@@ -1,5 +1,6 @@
-import "./nav.css";
-import "./Dropdown/DropDown.css";
+/* eslint-disable */
+import "./nav.scss";
+import "./Dropdown/DropDown.scss";
 import React, { useState, useEffect } from "react";
 import { DropDownElements } from "./Dropdown/DropDownElements";
 import { AiOutlineHome } from "react-icons/ai";

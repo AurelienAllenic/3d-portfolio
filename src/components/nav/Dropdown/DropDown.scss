@@ -19,23 +19,21 @@
     padding-right: 10%;
     color: #101010;
     transition: all ease 0.5s;
+    &:hover{
+      transition: all ease 0.5s;
+      transform: scale(1.1);
+      color: #404040;
+      a{
+        color: #404040;
+      }
+    }
   }
   .dropdown-element{
     font-size: 25px;
   }
-  .dropdown-menu li:hover{
-    transition: all ease 0.5s;
-    transform: scale(1.1);
-    color: #404040;
-  }
-  .dropdown-menu li:hover a{
-    color: #404040;
-  }
-  
   .dropdown-menu.clicked {
     display: none;
   }
-  
   .dropdown-link {
     display: block;
     height: 100%;
