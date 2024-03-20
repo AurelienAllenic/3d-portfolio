@@ -63,8 +63,8 @@ const Contact = () => {
       <a className='anchor' id='contact'></a>
       <section className='section-contact' id='no_border'>
           <form ref={form} onSubmit={sendEmail} className='form'>
-            <h1 className='main-title-contact'>{language === 'FR' ?  "N'hésitez pas à me contacter" : "Feel free to contact me"}</h1>
-            <h2 className='sub-title-contact'>{language === 'FR' ? 'je reviendrai vers vous dans les plus brefs délais' : 'I will come back to you shortly'}</h2>
+            <h1 className='main-title-contact'>Contact</h1>
+            <h2 className='sub-title-contact'>{language === 'FR' ? "N'hésitez pas à me contacter, je reviendrai vers vous dans les plus brefs délais" : "Feel free to contact me, I will come back to you shortly"}</h2>
             <ToastContainer />
             <div className='container_inputs'>
                 <input id='name' type="text" name='name' placeholder={language === 'FR' ? 'Votre Nom': 'Your full Name'} required className='input'></input>

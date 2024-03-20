@@ -17,7 +17,7 @@ const CvLetter = () => {
     return (
         <>
             <section className='cvLetter' id='cvLetter'>
-                <h1 className='main-title-languages'>{language === 'FR' ? 'Cv & lettre de motivation' : 'CV & motivation letter'}</h1>
+                <h1 className='main-title-languages'>Curriculum</h1>
                 <div className='cvLetter_container'>
                     <div className='container_cv' onClick={() => downloadDocument(CVPDF)}>
                         <img src={CV} alt="" />
