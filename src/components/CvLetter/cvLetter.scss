@@ -6,7 +6,7 @@
   margin-top: 0%;
   gap: 3rem;
   padding-bottom: 10%;
-  padding-top: 10%;
+  padding-top: 25%;
   background-color: #F5F5F5;
 }
 
@@ -130,12 +130,15 @@
   .main-title-languages {
     font-size: 2.4rem;
     margin-bottom: 0%;
-  } 
+  }
 }
 @media (min-width: 628px) {
   .main-title-languages {
     font-size: 2.7rem;
   }
+  .cvLetter{
+    padding-top: 17%;
+  } 
   .cvLetter_container {
     display: flex;
     justify-content: center;
@@ -149,6 +152,10 @@
   .main-title-languages {
     font-size: 2.7rem;
   }
+  .cvLetter{
+    padding-top: 13%;
+    gap: 5rem;
+  } 
   .cvLetter_container {
     display: flex;
     justify-content: center;
@@ -160,9 +167,21 @@
   .container_cv img, .container_letter img{
     width: 100%;
   }
-  .cvLetter {
-    gap: 10rem;
-  }
   
 }
-
+@media (min-width: 1248px) {
+  .cvLetter{
+    padding-top: 10%;
+  }
+  .cvLetter_container{
+    gap: 5rem;
+  }
+}
+@media (min-width: 1500px) {
+  .cvLetter{
+    padding-top: 9%;
+  }
+  .cvLetter_container{
+    gap: 7rem;
+  }
+}

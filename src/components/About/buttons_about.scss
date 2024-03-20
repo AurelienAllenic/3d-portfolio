@@ -140,6 +140,11 @@
         font-size: 1.2rem;
     }
 }
+@media(max-width: 1073px){
+    .container_change_languages{
+        top: 20%;
+    }
+}
 @media(max-width: 825px){
     .linkHome a{
         font-size: 1rem;
@@ -161,11 +166,6 @@
     }
     .container_change_languages{
         top: 30%;
-    }
-}
-@media(max-width: 554px){
-    .content_confirmation_language{
-        font-size: 2rem;
     }
 }
 @media(max-width : 585px){

@@ -40,10 +40,10 @@ const FrontEnd = ({ setCodingLanguage }) => {
         </div>
         <div className='container_list_dev'>
           <ul className='list_card'>
-            <li>HTML/CSS</li>
+            <li>HTML</li>
+            <li>CSS/SCSS</li>
             <li>JavaScript</li>
             <li>React</li>
-            <li>ThreeJs</li>
           </ul>
         </div>
       </div>

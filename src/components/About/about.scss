@@ -11,7 +11,7 @@ $secondary-color: white;
     gap: 4rem;
     margin-top: 0%;
     padding-bottom: 5%;
-    padding-top: 9%;
+    padding-top: 100px;
     background-color: $primary-color;
     color: $secondary-color;
 
@@ -132,7 +132,7 @@ $secondary-color: white;
 
     @media (max-width: 823px) {
         .container_about {
-            padding-top: 15%;
+            padding-top: 5%;
         }
     }
 }
@@ -233,7 +233,6 @@ $secondary-color: white;
         }
         .container_about {
             gap: 1.5rem;
-            padding-top: 25%;
         }
         .logos {
             padding: 20% 0 15% 0;
@@ -286,13 +285,13 @@ $secondary-color: white;
 
     @media (max-width: 270px) {
         .main-title-about {
-            font-size: 1.7rem;
+            font-size: 1.3rem;
         }
         .sub-title {
             font-size: 1rem;
         }
         .container_about {
-            padding-top: 40%;
+            padding-top: 30%;
         }
     }
 }

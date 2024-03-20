@@ -62,16 +62,6 @@ function Navbar() {
           onClick={handleShowLinks}
         >
         </Link>
-        <Link
-          className="navbar_logo_home"
-          to="home"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={800}
-        >
-          <AiOutlineHome />
-        </Link>
         <ul className="navbar_links">
           <li className="navbar_item slideInDown-1">
             <Link
