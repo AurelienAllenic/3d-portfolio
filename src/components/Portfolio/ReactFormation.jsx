@@ -9,7 +9,7 @@ const ReactFormation = () => {
     <>
       <a className='anchor' id='formation-react'></a>
       <section className="container_portfolio margin" id="formation-react">
-        <h1 className="main-title-portfolio">{language === 'FR' ? 'Projets - formation React - Openclassrooms' : 'Projects - React formation - Openclassrooms'}</h1>
+        <h1 className="react main-title-portfolio">{language === 'FR' ? 'Projets - formation React' : 'Projects - React formation'}</h1>
           <article className="container-projects" >
             <CardSection datas={openclassrooms2} />
           </article>
