@@ -16,6 +16,17 @@ import LearnHome from "../assets/portfolio/learnhome.jpeg"
 import Wealthealth from "../assets/portfolio/wealthealth.jpeg"
 import Sportsee from "../assets/portfolio/sportsee.jpeg"
 import ArgentBank from "../assets/portfolio/argentBank.jpeg"
+import BooksToScrape from "../assets/portfolio/booksToScrape.jpeg"
+import HomeSkolar from "../assets/portfolio/homeSkolar.jpeg"
+import ChessTournament from "../assets/portfolio/chessTournament.jpeg"
+import JustStreamIt from "../assets/portfolio/justStreamIt.jpeg"
+import AlgoInvestAndTrade from "../assets/portfolio/algoInvest&Trade.jpeg"
+import LitRevu from "../assets/portfolio/litRevu.jpeg"
+import SoftDesk from "../assets/portfolio/softDesk.jpeg"
+import GudLft from "../assets/portfolio/gudLft.jpeg"
+import CahierDesCharges from "../assets/HomeSkolar/cahier_des_charges.pdf"
+import BacklogProduit from "../assets/HomeSkolar/backlog_product.pdf"
+import Support from "../assets/HomeSkolar/support_presentation.pdf"
 
 export const openclassrooms1 = [
     {
@@ -25,7 +36,8 @@ export const openclassrooms1 = [
         titleEn:'Booki, creation of a hostel booking project with HTML/CSS',
         github: 'https://github.com/AurelienAllenic/Booki',
         demo: 'https://aurelienallenic.github.io/Booki/',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 2,
@@ -34,7 +46,8 @@ export const openclassrooms1 = [
         titleEn:'Ohmyfood, gastronomic website with HTML, CSS and SCSS',
         github: 'https://github.com/AurelienAllenic/AurelienAllenic.github.io',
         demo: 'https://aurelienallenic.github.io/ohmyfood.github.io/',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 3,
@@ -43,7 +56,8 @@ export const openclassrooms1 = [
         titleEn:'Lapanthere, WebDesign project based in Lyon, improvement of SEO of an existing site',
         github: 'https://github.com/AurelienAllenic/lapanthere.github.io',
         demo: 'https://aurelienallenic.github.io/lapanthere.github.io/',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 4,
@@ -52,7 +66,8 @@ export const openclassrooms1 = [
         titleEn:'Kanap, e-commerce website with javaScript HTML, CSS',
         github: 'https://github.com/AurelienAllenic/kanap-p5-openclassrooms',
         demo: '',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 5,
@@ -61,7 +76,8 @@ export const openclassrooms1 = [
         titleEn:'Hot-takes, api of like and pimented sauces with nodeJs and Js',
         github: 'https://github.com/AurelienAllenic/hot-takes',
         demo: '',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 6,
@@ -70,7 +86,8 @@ export const openclassrooms1 = [
         titleEn:"Groupomania, company's social network made with ReactJs and NodeJs",
         github: 'https://github.com/AurelienAllenic/groupomania/tree/develop',
         demo: '',
-        figma:''
+        figma:'',
+        folder:'',
     },
 
 ]
@@ -83,7 +100,8 @@ export const openclassrooms2 = [
         titleEn: 'GameOn, Handling forms with Regex in Javascript',
         github: 'https://github.com/AurelienAllenic/GameOn-website-FR',
         demo: '',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 2,
@@ -92,7 +110,8 @@ export const openclassrooms2 = [
         titleEn: 'Fisheye, Creating a photographe site accessible in javascript',
         github: 'https://github.com/AurelienAllenic/Front-End-Fisheye',
         demo: '',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 3,
@@ -101,7 +120,8 @@ export const openclassrooms2 = [
         titleEn:'Les petits plats, algorithmic search project in javascript',
         github: 'https://github.com/AurelienAllenic/les_petits_plats',
         demo: 'https://aurelienallenic.github.io/les_petits_plats/',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 4,
@@ -110,7 +130,8 @@ export const openclassrooms2 = [
         titleEn:'Kasa, project of creating an apartment rental online website in javascript',
         github: 'https://github.com/AurelienAllenic/kasa_p11',
         demo: 'https://aurelienallenic.github.io/kasa_p11/',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 5,
@@ -120,6 +141,7 @@ export const openclassrooms2 = [
         github: '',
         demo: '',
         figma: 'https://www.figma.com/file/AS6HKjnwIh1bpK0SZE90GJ/learnHome?type=design&node-id=0-1&mode=design',
+        folder:'',
     },
     {
         id: 6,
@@ -128,7 +150,8 @@ export const openclassrooms2 = [
         titleEn:'WealthHealth, refactoring in reactJs from a jQuery code a site consisting of adding employees using react redux',
         github: 'https://github.com/AurelienAllenic/wealthhealth-op-p14',
         demo: 'https://aurelienallenic.github.io/wealthhealth-op-p14/',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 7,
@@ -137,7 +160,8 @@ export const openclassrooms2 = [
         titleEn:'Sportsee, FullStack ReactJs + nodeJs website that allows you to track your daily sport statistics using recharts',
         github: 'https://github.com/AurelienAllenic/sportsee',
         demo: '',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 8,
@@ -146,7 +170,103 @@ export const openclassrooms2 = [
         titleEn:'ArgentBank, FullStack ReactJs + nodeJs website that allows you to connect to your bank account and edit your username',
         github: 'https://github.com/AurelienAllenic/argent-bank',
         demo: '',
-        figma:''
+        figma:'',
+        folder:'',
+    },
+]
+export const openclassrooms3 = [
+    {
+        id: 1,
+        image: BooksToScrape,
+        title: "BooksToScrape, Scapper pour suivre les prix des livres chez un revendeur en Python.",
+        titleEn: 'GameOn, Scrapper to follow the price of books at a bookstore in Python.',
+        github: 'https://github.com/AurelienAllenic/BooksOnline---python---p1',
+        demo: '',
+        figma:'',
+        folder:'',
+    },
+    {
+        id: 2,
+        image: HomeSkolar,
+        title: "HomeSkolar, Création d'un cahier des charges et d'un backlog product pour une association de soutien scolaire",
+        titleEn: 'HomeSkolar, Creation of a project plan and backlog product for a school support association',
+        github: '',
+        demo: '',
+        figma:'',
+        folder: [
+            {
+            id: 1,
+            title: 'Spécifications',
+            titleEn: 'plan',
+            link: CahierDesCharges,
+        },
+        {
+            id: 2,
+            title: 'backlog',
+            titleEn: 'backlog',
+            link: BacklogProduit,
+        },
+    ]
+    },
+    {
+        id: 3,
+        image: ChessTournament,
+        title: "ChessTournament, algorithme de gestion de tournois d'échecs en Python",
+        titleEn:'ChessTournament, algorithmic chess tournament project in python',
+        github: 'https://github.com/AurelienAllenic/chessTournament-p4-python',
+        demo: '',
+        figma:'',
+        folder:'',
+    },
+    {
+        id: 4,
+        image: JustStreamIt,
+        title: "JustStreamIt, Site de streaming réalisé avec django et javascript",
+        titleEn:'JustStreamIt, Online streaming site with django and javascript',
+        github: 'https://github.com/AurelienAllenic/justStreamIt-p6-OP',
+        demo: '',
+        figma:'',
+        folder:'',
+    },
+    {
+        id: 5,
+        image: AlgoInvestAndTrade,
+        title: "AlgoInvest&Trade, Optimisation d'investissmeent à l'aide d'algorithmes Python",
+        titleEn:'AlgoInvest&Trade, Optimization of investment with Python algorithms',
+        github: 'https://github.com/AurelienAllenic/AlgoInvest-Trade-OP-P7',
+        demo: '',
+        figma: '',
+        folder:'',
+    },
+    {
+        id: 6,
+        image: LitRevu,
+        title: "LitRevu, Projet django qui permet aux utilisateurs de poster des critiques ou des demandes de critiques ainsi que suivre des uilisateurs.",
+        titleEn:'LitRevu, django project that allows users to post reviews or request reviews and track users.',
+        github: 'https://github.com/AurelienAllenic/LITRevu---P9',
+        demo: '',
+        figma:'',
+        folder:'',
+    },
+    {
+        id: 7,
+        image: SoftDesk,
+        title: "SoftDesk, Développement d'une API RESTful avec Django Rest Framework pour remonter et suivre des problèmes techniques en B2B.",
+        titleEn:"SoftDesk, Développement d'une API RESTful avec Django Rest Framework pour remonter et suivre des problèmes techniques en B2B." ,
+        github: 'https://github.com/AurelienAllenic/softDesk_OP-P10',
+        demo: '',
+        figma:'',
+        folder:'',
+    },
+    {
+        id: 8,
+        image: GudLft,
+        title: "GudLft, projet de testing d'une api flask pour des réservations de places en compétitions sportives.",
+        titleEn:'GudLft, project of testing a flask api for sport performance reservations.',
+        github: 'https://github.com/AurelienAllenic/GudLft-OP-P11',
+        demo: '',
+        figma:'',
+        folder:'',
     },
 ]
 export const projects = [
@@ -157,7 +277,8 @@ export const projects = [
         titleEn:'paroxx.com : project of a website for the artist ParoXX created with ReactJs / Vite',
         github: '',
         demo: 'https://paroxx.com',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 2,
@@ -166,7 +287,8 @@ export const projects = [
         titleEn:'cleoperrin.com : showcase project for architects and designers',
         github: '',
         demo: 'https://cleoperrin.com',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 3,
@@ -175,7 +297,8 @@ export const projects = [
         titleEn:'claquettes-swing.fr : participation to the creation and deployment',
         github: '',
         demo: 'https://claquettes-swing.fr',
-        figma:''
+        figma:'',
+        folder:'',
     },
     {
         id: 4,
@@ -184,6 +307,7 @@ export const projects = [
         titleEn:'linconnu-magic.com : Creation of a magic website aiming the public',
         github: '',
         demo: 'https://linconnu-magic.com',
-        figma:''
+        figma:'',
+        folder:'',
     }
 ]

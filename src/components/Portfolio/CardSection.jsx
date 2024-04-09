@@ -14,6 +14,7 @@ const CardSection = ({ datas }) => {
     const [touchPosition, setTouchPosition] = useState(null)
     const [selectedCard, setSelectedCard] = useState(null);
     const [cardPosition, setCardPosition] = useState({ x: 0, y: 0 });
+    const [isFolderClicked, setIsFolderClicked] = useState(false);
 
     const handleTouchStart = (e) => {
         const touchDown = e.touches[0].clientX
@@ -100,43 +101,51 @@ const CardSection = ({ datas }) => {
     const handleCardHoverEnd = (card) => {
         gsap.to(card, { scale: 1, duration: 0.5 });
     };
+    
 
     return (
         <>
-            {datas.map(({ id, image, title, titleEn, github, demo, figma }, index) => (
+            {datas.map(({ id, image, title, titleEn, github, demo, figma, folder }, index) => (
                 <article key={id} ref={el => cardsRef.current[index] = el} className='card-single-project' onClick={() => handleCardClick(index)} onMouseEnter={() => handleCardHover(cardsRef.current[index])} onMouseLeave={() => handleCardHoverEnd(cardsRef.current[index])}>
                     <img src={image} className='img-single-project'/>
                     <p className='content-single-project'>{language === 'FR' ? title : titleEn}</p>
                     <div className='container_links_portfolio'>
-                        {figma === '' ? (
-                            <>
-                                {github !== '' && demo !== '' ? (
-                                    <a href={github} target="_blank" className='link-single-project'>Github</a>
-                                ) : github !== '' ? (
-                                    <a href={github} target="_blank" className='link-single-project-figma'>Github</a>
-                                ) : null}
-                                {demo !== '' && <a href={demo} target="_blank" className='link-single-project'>{language === 'FR' ? 'Démo en direct' :'Live Demo'}</a>}
-                            </>
-                        ) : (
-                            <a href={figma} target="_blank" className='link-single-project-figma'>Figma</a>
-                        )}
+                    {figma === '' && folder.length === 0 ? (
+                        <>
+                            {github !== '' && demo !== '' ? (
+                                <a href={github} target="_blank" className='link-single-project'>Github</a>
+                            ) : github !== '' ? (
+                                <a href={github} target="_blank" className='link-single-project-figma'>Github</a>
+                            ) : null}
+                            {demo !== '' && <a href={demo} target="_blank" className='link-single-project'>{language === 'FR' ? 'Démo en direct' :'Live Demo'}</a>}
+                        </>
+                    ) : figma !== '' ? (
+                        <a href={figma} target="_blank" download className='link-single-project-figma'>Figma</a>
+                    ) : folder.length > 0 && folder.map((file, idx) => (
+                        <a key={file.id} href={file.link} target="_blank" className='link-single-project'>{language === 'FR' ? file.title : file.titleEn}</a>
+                    ))}
                     </div>
                 </article>
             ))}
             {/* Modale */}
             {selectedCard !== null && (
-                <div className="modal">
+                    <div className="modal">
                     <div className="modal-overlay"/>
                     <div className="modal-content" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
                         <button className='close_button' onClick={handleCloseModal}><IoMdClose /></button>
                         <article key={datas[selectedCard].id} className='card-single-project_modal'>
-                        <div className="arrows_img">
-                            <button className="arrow-prev" onClick={handlePrevCard}><IoIosArrowBack /></button>
-                            <img src={datas[selectedCard].image} className='img-single-project'/>
-                            <button className="arrow-next" onClick={handleNextCard}><IoIosArrowForward /></button>
-                        </div>
+                            <div className="arrows_img">
+                                <button className="arrow-prev" onClick={handlePrevCard}><IoIosArrowBack /></button>
+                                <img src={datas[selectedCard].image} className='img-single-project'/>
+                                <button className="arrow-next" onClick={handleNextCard}><IoIosArrowForward /></button>
+                            </div>
                             <p className='content-single-project'>{language === 'FR' ? datas[selectedCard].title : datas[selectedCard].titleEn}</p>
                             <div className='container_links_portfolio'>
+                                {datas[selectedCard].folder && datas[selectedCard].folder.length > 0 && (
+                                    datas[selectedCard].folder.map((file, idx) => (
+                                        <a key={file.id} href={file.link} target="_blank" className='link-single-project'>{language === 'FR' ? file.title : file.titleEn}</a>
+                                    ))
+                                )}
                                 {datas[selectedCard].figma === '' ? (
                                     <>
                                         {datas[selectedCard].github !== '' && datas[selectedCard].demo !== '' ? (

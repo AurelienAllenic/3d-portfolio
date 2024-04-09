@@ -5,6 +5,7 @@ import PersoProjects from './Portfolio/PersoProjects'
 import Contact from './Contact/Contact'
 import About from './About/About'
 import CvLetter from './CvLetter/CvLetter'
+import PythonFormation from './Portfolio/PythonFormation'
 
 const EntireApp = () => {
   return (
@@ -13,6 +14,7 @@ const EntireApp = () => {
         <About />
         <CvLetter />
         <Languages />
+        <PythonFormation />
         <ReactFormation />
         <DevFormation />
         <PersoProjects />
