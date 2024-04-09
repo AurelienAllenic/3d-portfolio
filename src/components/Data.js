@@ -178,7 +178,7 @@ export const openclassrooms3 = [
     {
         id: 1,
         image: BooksToScrape,
-        title: "BooksToScrape, Scapper pour suivre les prix des livres chez un revendeur en Python.",
+        title: "BooksToScrape, Scrapper pour suivre les prix des livres chez un revendeur en Python.",
         titleEn: 'GameOn, Scrapper to follow the price of books at a bookstore in Python.',
         github: 'https://github.com/AurelienAllenic/BooksOnline---python---p1',
         demo: '',
