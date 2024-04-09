@@ -12,8 +12,8 @@ export const DropDownElements = [
       cName: 'dropdown-element slideInDown-port-2',
     },
     {
-      title: 'formation développeur web',
-      titleEn: 'web development formation',
+      title: 'formation dev web',
+      titleEn: 'web dev formation',
       path: 'formation-web',
       cName: 'dropdown-element slideInDown-port-3',
     },

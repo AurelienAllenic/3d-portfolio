@@ -55,11 +55,11 @@ const CardSection = ({ datas }) => {
                 }, {
                     autoAlpha: 1,
                     scale: 1,
-                    duration: 0.7,
+                    duration: 1,
                     scrollTrigger: {
                         trigger: card,
-                        start: "top 80%",
-                        end : "bottom 10%",
+                        start: "top 70%",
+                        end : "bottom 0%",
                         toggleActions: "play reverse play reverse",
                     }
                 });

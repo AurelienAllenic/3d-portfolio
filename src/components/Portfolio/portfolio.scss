@@ -1,9 +1,76 @@
+@keyframes arrow_portfolio{
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(1.02);
+    }
+}
+
 .first-title{
     font-size: 1.6rem;
     text-align: center;
     font-family: "Lemon";
     letter-spacing: 0.2rem;
+    padding-bottom: 10%;
 }
+.container_arrow_title {
+    display: flex;
+    gap: 0rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    white-space: nowrap;
+    transition: all ease 0.5s;
+    animation: arrow_portfolio 1s ease-out infinite alternate;
+    position: relative; /* Position relative pour positionner correctement le pseudo-élément */
+    cursor: pointer; /* Déplacement du curseur déplacé ici pour éviter la répétition */
+    margin: 2%;
+    /* Lorsque le container est survolé, applique un effet de mise à l'échelle */
+    &:hover {
+        transform: scale(1.1);
+        svg{
+            transform: rotate(180deg);
+        }
+    }
+    &:focus{
+        transform: scale(1);
+        svg{
+            transform: rotate(0deg);
+        }
+    }
+
+    h1 {
+        position: relative;
+        display: inline-block;
+    }
+
+    h1::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        background-color: transparent;
+        transition: width 0.3s ease;
+    }
+
+    svg {
+        transition: all ease 0.5s;
+        height: 2em;
+        width: 2em;
+    }
+
+    &:hover h1::after {
+        width: 100%;
+        background-color: #101010;
+    }
+    &:hover h1:focus {
+        width: 100%;
+    }
+}
+
 
 .modal{
     position: fixed;
@@ -64,7 +131,7 @@
     align-items: center;
 }
 .main-title-portfolio{
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     margin: 5%;
     text-align: center;
 }
@@ -200,12 +267,13 @@ flex-direction: column;
 justify-content: center;
 margin-left: 1%;
 margin-right: 1%;
-margin-top: 5%;
+margin-top: 0%;
+margin-bottom: 1%;
 }
 .container-projects{
     display: grid;
     width: 90%;
-    gap: 2em;
+    gap: 1em;
     justify-content: center;
 
 }
@@ -268,11 +336,20 @@ margin-top: 5%;
 }
 @media (min-width: 558px){
     .main-title-portfolio{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    .container_arrow_title {
+        flex-direction: row;
+        width: 90%;
+        svg{
+            width: 2em;
+            height: 2em;
+        }
     }
     .first-title{
         font-size: 1.9rem;
     }
+
 }
 @media (min-width: 628px){
     .main-title-portfolio{
@@ -285,19 +362,16 @@ margin-top: 5%;
 @media(min-width: 657px){
     .container-projects{
         grid-template-columns: 1fr 1fr;
-    }
-}
-@media(min-width: 871px){
-    .container_portfolio{
-        padding: 5% 0 5% 0;
+        gap: 1.5em;
     }
 }
 @media(min-width: 1007px){
     .container-projects{
         grid-template-columns: 1fr 1fr 1fr;
+        gap: 2em;
     }
-    .container_portfolio{
-        padding: 0 0 5% 0;
+    .container_arrow_title{
+        margin: 0%;
     }
 }
 @media(max-height: 350px){
