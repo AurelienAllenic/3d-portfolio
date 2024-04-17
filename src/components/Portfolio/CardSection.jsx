@@ -60,7 +60,7 @@ const CardSection = ({ datas }) => {
                         trigger: card,
                         start: "top 70%",
                         end : "bottom 0%",
-                        toggleActions: "play reverse play reverse",
+                        toggleActions: "play reverse play none",
                     }
                 });
             }
