@@ -31,11 +31,11 @@ return (
             </div>
             <div className="container_text_about">
                 {language === 'FR' ? <p>
-                    Actuellement en formation chez Openclassrooms en tant que développeur d'applications Python, j'ai suivi une piscine en école d'informatique ainsi que plusieurs formations : développeur web, développeur d'applications javascript / react.
+                    Diplômé de trois formations Openclassrooms : développeur web, développeur d'applications javascript / react et développeur d'applications Python, j'ai également suivi une piscine en école d'informatique.
                     <br />Je suis également sur le point de commencer une nouvelle formation en 4éme année de mastère en école dans le cadre d'une alternance.
                     <br />J'ai aussi réalisé des projets hors de mes parcours et possède une certaine appétence pour le développement web et mobile.
                 </p> : <p>
-                    Currently studying at Openclassrooms as a Python application developer, I have completed a bootcamp at a computer science school as well as several courses: web developer, JavaScript / React application developer.
+                    Graduated from three OpenClassrooms programs :  web developer, JavaScript/React application developer, and Python application developer, I have also completed a coding bootcamp at a computer science school.
                     <br />I'm also about to start a new training program in the fourth year of my master's degree at a school as part of an apprenticeship. <br />
                     I have also completed projects outside of my courses and have a keen interest in web development.
                 </p>}

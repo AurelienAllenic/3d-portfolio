@@ -72,7 +72,7 @@ const CardSection = ({ datas }) => {
                 ScrollTrigger.getAll().forEach(trigger => trigger.kill());
             }
         };
-    }, [datas]);
+    }, []);
 
     // Gestionnaire de clic pour ouvrir la modale
     const handleCardClick = (index) => {
