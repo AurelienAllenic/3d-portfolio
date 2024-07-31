@@ -26,7 +26,8 @@ import SoftDesk from "../assets/portfolio/softDesk.jpeg"
 import GudLft from "../assets/portfolio/gudLft.jpeg"
 import CahierDesCharges from "../assets/HomeSkolar/cahier_des_charges.pdf"
 import BacklogProduit from "../assets/HomeSkolar/backlog_product.pdf"
-import Support from "../assets/HomeSkolar/support_presentation.pdf"
+import EpicEvents from "../assets/portfolio/epic_events.webp"
+import Orange from "../assets/portfolio/orange.webp"
 
 export const openclassrooms1 = [
     {
@@ -264,6 +265,26 @@ export const openclassrooms3 = [
         title: "GudLft, projet de testing d'une api flask pour des réservations de places en compétitions sportives.",
         titleEn:'GudLft, project of testing a flask api for sport performance reservations.',
         github: 'https://github.com/AurelienAllenic/GudLft-OP-P11',
+        demo: '',
+        figma:'',
+        folder:'',
+    },
+    {
+        id: 9,
+        image: EpicEvents,
+        title: "Epic Events, développement d'un backend sécurisé avec Python et SQL dans le domaine de l'évenementiel",
+        titleEn:"Epic Events, development of a secure backend with Python and SQL in the event management field",
+        github: 'https://github.com/AurelienAllenic/epic_events---P12',
+        demo: '',
+        figma:'',
+        folder:'',
+    },
+    {
+        id: 10,
+        image: Orange,
+        title: "Orange County Lettings, correction de bugs, testing, logging avec Sentry, documentation avec Read The Docs et Spynx. Création d'un pipeline CI/CD avec GitHub Actions, Render et Docker",
+        titleEn:"Orange County Lettings, bugs correction, testing, logging with Sentry, documentation with Read The Docs and Sphinx. Creation of a CI/CD pipeline with GitHub Actions, Render and Docker",
+        github: 'https://github.com/AurelienAllenic/Python-OC-Lettings-FR',
         demo: '',
         figma:'',
         folder:'',

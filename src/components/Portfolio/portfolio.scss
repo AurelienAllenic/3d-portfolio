@@ -23,18 +23,18 @@
 }
 .container_arrow_title {
     display: flex;
-    gap: 0rem;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     white-space: nowrap;
     transition: all ease 0.5s;
     animation: arrow_portfolio 1s ease-out infinite alternate;
-    position: relative; /* Position relative pour positionner correctement le pseudo-élément */
-    cursor: pointer; /* Déplacement du curseur déplacé ici pour éviter la répétition */
+    position: relative;
+    cursor: pointer;
     margin: 2%;
-    /* Lorsque le container est survolé, applique un effet de mise à l'échelle */
+    box-shadow: 0px 37px 15px -3px rgba(0,0,0,0.1);
     &:hover {
         transform: scale(1.1);
         svg{
@@ -47,10 +47,11 @@
             transform: rotate(0deg);
         }
     }
-
     h1 {
         position: relative;
         display: inline-block;
+        color: white;
+        padding: 10%;
     }
 
     h1::after {
@@ -59,27 +60,24 @@
         bottom: -10px;
         left: 0;
         width: 0%;
-        height: 1px;
+        height: 5px;
         background-color: transparent;
         transition: width 0.3s ease;
     }
-
     svg {
         transition: all ease 0.5s;
         height: 2em;
         width: 2em;
+        fill: white;
     }
-
     &:hover h1::after {
         width: 100%;
-        background-color: #101010;
+        background-color: white;
     }
     &:hover h1:focus {
         width: 100%;
     }
 }
-
-
 .modal{
     position: fixed;
     width: 100%;
@@ -212,14 +210,15 @@
 }
 .container_links_portfolio{
     display: flex;
-    gap: 2em;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    width: 100%;
+    gap: 1rem;
 }
 .link-single-project{
     border-radius: 25px;
-    padding: 2%;
+    padding: 3%;
     white-space: nowrap;
     color: #101010;
     box-shadow: 0px 10px 10px -3px rgba(0,0,0,0.1);
@@ -243,11 +242,11 @@
         &::after{
             content: '';
             width: 75%;
-            height: 1px;
+            height: 2px;
             background: white;
             inset: 10px;
             left: 11px;
-            top: 45px;
+            top: 35px;
             transition: all ease 0.5s;
         }
     }
@@ -282,7 +281,7 @@
             background: white;
             inset: 10px;
             left: 10px;
-            top: 30px;
+            top: 45px;
             transition: all ease 0.5s;
         }
     }
@@ -304,6 +303,25 @@ margin-bottom: 1%;
     gap: 1em;
     justify-content: center;
 
+}
+.take_space {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_title_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin: 1%;
+    img{
+        width: 80%;
+        height: 70%;
+    }
 }
 .dev{
     margin-top: 5%;

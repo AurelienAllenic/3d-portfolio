@@ -80,10 +80,10 @@ function Navbar() {
         className={`navbar ${showlinks ? "show-nav" : "hide-nav"} ${navbarBackground || isMobile ? "scrolled" : ""}`}
         id="nav"
       >
-        <ul className={`navbar_links ${navbarBackground || isMobile ? "scrolled" : ""}`}>
+        <ul className={`navbar_links ${navbarBackground || !isMobile ? "scrolled_no_back" : ""}${navbarBackground || isMobile ? "scrolled" : ""}`}>
           <li className="navbar_item slideInDown-1">
             <Link
-              className={`navbar_link ${navbarBackground || isMobile ? "scrolled" : ""}`}
+              className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`}
               to="home"
               spy={true}
               smooth={true}
@@ -96,7 +96,7 @@ function Navbar() {
           </li>
           <li className="navbar_item slideInDown-2">
             <Link
-              className={`navbar_link ${navbarBackground || isMobile ? "scrolled" : ""}`}
+              className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`}
               to="cvLetter"
               spy={true}
               smooth={true}
@@ -109,7 +109,7 @@ function Navbar() {
           </li>
           <li className="navbar_item slideInDown-3">
             <Link
-              className={`navbar_link ${navbarBackground || isMobile ? "scrolled" : ""}`}
+              className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`}
               to="languages"
               spy={true}
               smooth={true}
@@ -125,7 +125,7 @@ function Navbar() {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
-            <div className={`navbar_link ${navbarBackground || isMobile ? "scrolled" : ""}`} onClick={toggleDropdown}>
+            <div className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`} onClick={toggleDropdown}>
               Portfolio
               {dropdown && (
                 <ul className={`dropdown-menu ${navbarBackground || isMobile ? "scrolled" : ""}`}>
@@ -137,7 +137,7 @@ function Navbar() {
                         onClick={closeNavMob}
                         spy={true}
                         smooth={true}
-                        offset={0}
+                        offset={-100}
                         duration={800}
                       >
                         <span>{language === 'FR' ? item.title : item.titleEn}</span>
@@ -150,7 +150,7 @@ function Navbar() {
           </li>
           <li className="navbar_item slideInDown-5">
             <Link
-              className={`navbar_link ${navbarBackground || isMobile ? "scrolled" : ""}`}
+              className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`}
               to="contact"
               spy={true}
               smooth={true}

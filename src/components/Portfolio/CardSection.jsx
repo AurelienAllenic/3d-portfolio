@@ -204,7 +204,7 @@ const CardSection = ({ datas }) => {
 
     const handleCardHover = (card) => {
         if (selectedCardIndex === null) {
-            gsap.to(card, { scale: 1.1, duration: 0.3 });
+            gsap.to(card, { scale: 1.05, duration: 0.3 });
         }
     };
 
@@ -216,50 +216,58 @@ const CardSection = ({ datas }) => {
 
     return (
         <>
-            {datas.map(({ id, image, title, titleEn, github, demo, figma, folder }, index) => (
-                <article
-                    key={id}
-                    ref={el => cardsRef.current[index] = el}
-                    className={`card-single-project ${selectedCardIndex !== null && selectedCardIndex !== index ? 'disabled' : 'enabled'}`}
-                    onClick={() => handleCardClick(index)}
-                    onMouseEnter={() => handleCardHover(cardsRef.current[index])}
-                    onMouseLeave={() => handleCardHoverEnd(cardsRef.current[index])}
-                    onTouchStart={handleTouchStart}
-                    onTouchMove={handleTouchMove}
-                >
-                    {selectedCardIndex === index && (<button className='close_button' onClick={(e) => { e.stopPropagation(); handleCloseCard(); }}><IoMdClose /></button>)}
-                    <div className="arrows_img">
+            {datas.map(({ id, image, title, titleEn, github, demo, figma, folder }, index) => {
+                // Determine if the current card should have the 'test' class
+                const shouldAddClass = index === 3 && datas.length < 5;
+                const shouldAddClass2 = index === 9 && datas.length < 11
+                const shouldAddClass3 = index === 4 && datas.length < 6
+                return (
+                    <article
+                        key={id}
+                        ref={el => cardsRef.current[index] = el}
+                        className={`card-single-project ${selectedCardIndex !== null && selectedCardIndex !== index ? 'disabled' : 'enabled'} ${shouldAddClass || shouldAddClass2 ? 'take_space' : ''}`}
+                        onClick={() => handleCardClick(index)}
+                        onMouseEnter={() => handleCardHover(cardsRef.current[index])}
+                        onMouseLeave={() => handleCardHoverEnd(cardsRef.current[index])}
+                        onTouchStart={handleTouchStart}
+                        onTouchMove={handleTouchMove}
+                    >
                         {selectedCardIndex === index && (
-                            <>
-                                <button className="arrow-prev" onClick={(e) => { e.stopPropagation(); handlePrevCard(); }}><IoIosArrowBack /></button>
+                            <button className='close_button' onClick={(e) => { e.stopPropagation(); handleCloseCard(); }}><IoMdClose /></button>
+                        )}
+                        <div className="arrows_img">
+                            {selectedCardIndex === index && (
+                                <>
+                                    <button className="arrow-prev" onClick={(e) => { e.stopPropagation(); handlePrevCard(); }}><IoIosArrowBack /></button>
+                                    <img src={image} className='img-single-project' />
+                                    <button className="arrow-next" onClick={(e) => { e.stopPropagation(); handleNextCard(); }}><IoIosArrowForward /></button>
+                                </>
+                            )}
+                            {selectedCardIndex !== index && (
                                 <img src={image} className='img-single-project' />
-                                <button className="arrow-next" onClick={(e) => { e.stopPropagation(); handleNextCard(); }}><IoIosArrowForward /></button>
-                            </>
-                        )}
-                        {selectedCardIndex !== index && (
-                            <img src={image} className='img-single-project' />
-                        )}
-                    </div>
-                    
-                    <p className='content-single-project'>{language === 'FR' ? title : titleEn}</p>
-                    <div className='container_links_portfolio'>
-                        {figma === '' && folder.length === 0 ? (
-                            <>
-                                {github !== '' && demo !== '' ? (
-                                    <a href={github} target="_blank" className='link-single-project'>Github</a>
-                                ) : github !== '' ? (
-                                    <a href={github} target="_blank" className='link-single-project-figma'>Github</a>
-                                ) : null}
-                                {demo !== '' && <a href={demo} target="_blank" className='link-single-project'>{language === 'FR' ? 'Démo en direct' : 'Live Demo'}</a>}
-                            </>
-                        ) : figma !== '' ? (
-                            <a href={figma} target="_blank" download className='link-single-project-figma'>Figma</a>
-                        ) : folder.length > 0 && folder.map((file, idx) => (
-                            <a key={file.id} href={file.link} target="_blank" className='link-single-project'>{language === 'FR' ? file.title : file.titleEn}</a>
-                        ))}
-                    </div>
-                </article>
-            ))}
+                            )}
+                        </div>
+                        
+                        <p className='content-single-project'>{language === 'FR' ? title : titleEn}</p>
+                        <div className='container_links_portfolio'>
+                            {figma === '' && folder.length === 0 ? (
+                                <>
+                                    {github !== '' && demo !== '' ? (
+                                        <a href={github} target="_blank" className='link-single-project'>Github</a>
+                                    ) : github !== '' ? (
+                                        <a href={github} target="_blank" className='link-single-project-figma'>Github</a>
+                                    ) : null}
+                                    {demo !== '' && <a href={demo} target="_blank" className='link-single-project'>{language === 'FR' ? 'Démo en direct' : 'Live Demo'}</a>}
+                                </>
+                            ) : figma !== '' ? (
+                                <a href={figma} target="_blank" download className='link-single-project-figma'>Figma</a>
+                            ) : folder.length > 0 && folder.map((file, idx) => (
+                                <a key={file.id} href={file.link} target="_blank" className='link-single-project'>{language === 'FR' ? file.title : file.titleEn}</a>
+                            ))}
+                        </div>
+                    </article>
+                );
+            })}
         </>
     );
 };

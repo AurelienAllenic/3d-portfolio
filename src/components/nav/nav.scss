@@ -30,6 +30,15 @@
     transition: all ease-in 0.3s;
     color: #000!important;
     &:hover{
+        transition: all ease-in 0.3s;
+        color: #131313!important;
+    }
+}
+.scrolled_no_back{
+    transition: all ease-in 0.3s;
+    color: #000!important;
+    &:hover{
+        transition: all ease-in 0.3s;
         color: #131313!important;
     }
 }
