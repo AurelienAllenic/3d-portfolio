@@ -4,6 +4,7 @@ import CardSection from './CardSection';
 import "./portfolio.scss";
 import { useLanguage } from '../Context/LanguageContext.jsx';
 import { PiCursorClickLight } from "react-icons/pi";
+import SearchProject from './SeachProject/SearchProject.jsx';
 
 const PythonFormation = () => {
   const { language } = useLanguage();
@@ -16,6 +17,7 @@ const PythonFormation = () => {
       <a className='anchor' id='formation-python'></a>
       <section className="container_portfolio margin" id="formation-python">
         <h1 className='react first-title'>{language === 'FR' ? 'Projets' : 'Projects'}</h1>
+        <SearchProject />
         <div className='container_title_img' style={{ position: 'relative' }}>
           <div 
             style={{ 

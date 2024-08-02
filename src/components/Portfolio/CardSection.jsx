@@ -62,6 +62,7 @@ const CardSection = ({ datas }) => {
             }
         };
     }, [datas]);
+    
 
     const handleCardClick = (index) => {
         if (selectedCardIndex !== null && selectedCardIndex !== index) {
@@ -127,7 +128,6 @@ const CardSection = ({ datas }) => {
             document.body.style.overflow = ''; // Restore scrolling
         }
     };
-    
 
     const handlePrevCard = () => {
         if (selectedCardIndex !== null) {
@@ -199,8 +199,6 @@ const CardSection = ({ datas }) => {
         setSelectedCardIndex(newIndex);
         document.body.classList.add('openModal');
     };
-    
-    
 
     const handleCardHover = (card) => {
         if (selectedCardIndex === null) {
@@ -219,13 +217,14 @@ const CardSection = ({ datas }) => {
             {datas.map(({ id, image, title, titleEn, github, demo, figma, folder }, index) => {
                 // Determine if the current card should have the 'test' class
                 const shouldAddClass = index === 3 && datas.length < 5;
-                const shouldAddClass2 = index === 9 && datas.length < 11
-                const shouldAddClass3 = index === 4 && datas.length < 6
+                const shouldAddClass2 = index === 9 && datas.length < 11;
+                const shouldAddClass3 = index === 4 && datas.length < 6;
+
                 return (
                     <article
-                        key={id}
+                        key={`${id}-${index}`}
                         ref={el => cardsRef.current[index] = el}
-                        className={`card-single-project ${selectedCardIndex !== null && selectedCardIndex !== index ? 'disabled' : 'enabled'} ${shouldAddClass || shouldAddClass2 ? 'take_space' : ''}`}
+                        className={`card-single-project ${selectedCardIndex !== null && selectedCardIndex !== index ? 'disabled' : 'enabled'} ${shouldAddClass || shouldAddClass2 || shouldAddClass3 ? 'take_space' : ''}`}
                         onClick={() => handleCardClick(index)}
                         onMouseEnter={() => handleCardHover(cardsRef.current[index])}
                         onMouseLeave={() => handleCardHoverEnd(cardsRef.current[index])}
@@ -238,9 +237,9 @@ const CardSection = ({ datas }) => {
                         <div className="arrows_img">
                             {selectedCardIndex === index && (
                                 <>
-                                    <button className="arrow-prev" onClick={(e) => { e.stopPropagation(); handlePrevCard(); }}><IoIosArrowBack /></button>
+                                    {datas.length > 1 && <button className="arrow-prev" onClick={(e) => { e.stopPropagation(); handlePrevCard(); }}><IoIosArrowBack /></button>}
                                     <img src={image} className='img-single-project' />
-                                    <button className="arrow-next" onClick={(e) => { e.stopPropagation(); handleNextCard(); }}><IoIosArrowForward /></button>
+                                    {datas.length > 1 && <button className="arrow-next" onClick={(e) => { e.stopPropagation(); handleNextCard(); }}><IoIosArrowForward /></button>}
                                 </>
                             )}
                             {selectedCardIndex !== index && (
@@ -262,7 +261,7 @@ const CardSection = ({ datas }) => {
                             ) : figma !== '' ? (
                                 <a href={figma} target="_blank" download className='link-single-project-figma'>Figma</a>
                             ) : folder.length > 0 && folder.map((file, idx) => (
-                                <a key={file.id} href={file.link} target="_blank" className='link-single-project'>{language === 'FR' ? file.title : file.titleEn}</a>
+                                <a key={`${file.id}-${idx}`} href={file.link} target="_blank" className='link-single-project'>{language === 'FR' ? file.title : file.titleEn}</a>
                             ))}
                         </div>
                     </article>

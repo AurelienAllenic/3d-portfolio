@@ -165,8 +165,8 @@
     .icon_change_languages{
     font-size: 35px;
     }
-} 
-@media(max-width : 514px){
+}
+@media(max-width : 524px){
     .logos figcaption {
         font-size: 0rem;
         bottom: -0.7em;
@@ -184,6 +184,12 @@
     }
     .link_home a {
         font-size: 4rem;
+    }
+    .content_confirmation_language{
+        font-size: 1.2rem;
+    }
+    .button_change_languages{
+        font-size: 17.5px;
     }
 }
 @media(max-width : 437px){
@@ -206,14 +212,6 @@
     }
     .linkHome a{
         font-size: 0.9rem;
-    }
-}
-@media(max-width : 389px){
-    .content_confirmation_language{
-        font-size: 1.2rem;
-    }
-    .button_change_languages{
-        font-size: 17.5px;
     }
 }
 @media(max-width : 285px){
