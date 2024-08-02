@@ -15,6 +15,7 @@ export const LanguageProvider = ({ children }) => {
     setLanguage((currentLanguage) => (currentLanguage === 'FR' ? 'EN' : 'FR'));
     setShowConfirmation(true);
     setHideConfirmation(false);
+    document.body.classList.add('overflow')
   };
 
   useEffect(() => {
@@ -23,6 +24,7 @@ export const LanguageProvider = ({ children }) => {
     if (showConfirmation && !hideConfirmation) {
       timer = setTimeout(() => {
         setHideConfirmation(true);
+        document.body.classList.remove('overflow')
       }, 1500);
     }
 

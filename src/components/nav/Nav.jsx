@@ -80,7 +80,7 @@ function Navbar() {
         className={`navbar ${showlinks ? "show-nav" : "hide-nav"} ${navbarBackground || isMobile ? "scrolled" : ""}`}
         id="nav"
       >
-        <ul className={`navbar_links ${navbarBackground || !isMobile ? "scrolled_no_back" : ""}${navbarBackground || isMobile ? "scrolled" : ""}`}>
+        <ul className={`navbar_links ${navbarBackground || !isMobile ? "scrolled_no_back " : ""}${navbarBackground && isMobile ? "scrolled " : ""}`}>
           <li className="navbar_item slideInDown-1">
             <Link
               className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`}
