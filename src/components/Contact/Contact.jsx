@@ -22,7 +22,6 @@ const Contact = () => {
         email: form.current.email.value,
         message: form.current.message.value,
     };
-
     try {
         const response = await fetch('https://aurelienallenic-0ea95fa598d3.herokuapp.com/send-email', {
             method: 'POST',

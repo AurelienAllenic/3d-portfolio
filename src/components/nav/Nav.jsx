@@ -22,6 +22,13 @@ function Navbar() {
     }
   };
   useEffect(() => {
+    if (window.innerWidth < 1073) {
+      setIsMobile(true)
+    }else{
+      setIsMobile(false)
+    }
+  }, [isMobile])
+  useEffect(() => {
     const handleResize = () => {
         setIsMobile(window.innerWidth < 1073);
     };
@@ -52,6 +59,7 @@ function Navbar() {
     navElement.classList.remove("show-nav");
     closeDropdown();
     setShowlinks(false);
+    document.body.classList.remove('overflow')
   };
 
   const toggleDropdown = () => {
@@ -72,6 +80,11 @@ function Navbar() {
 
   const handleShowLinks = () => {
     setShowlinks(!showlinks);
+    if(showlinks){
+      document.body.classList.remove('overflow')
+    }else{
+      document.body.classList.add('overflow')
+    }
   };
 
   return (
@@ -80,7 +93,7 @@ function Navbar() {
         className={`navbar ${showlinks ? "show-nav" : "hide-nav"} ${navbarBackground || isMobile ? "scrolled" : ""}`}
         id="nav"
       >
-        <ul className={`navbar_links ${navbarBackground || !isMobile ? "scrolled_no_back " : ""}${navbarBackground && isMobile ? "scrolled " : ""}`}>
+        <ul className={`navbar_links ${isMobile ? "scrolled" : ""}`}>
           <li className="navbar_item slideInDown-1">
             <Link
               className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`}
