@@ -26,7 +26,8 @@ import SoftDesk from "../assets/portfolio/softDesk.jpeg"
 import GudLft from "../assets/portfolio/gudLft.jpeg"
 import CahierDesCharges from "../assets/HomeSkolar/cahier_des_charges.pdf"
 import BacklogProduit from "../assets/HomeSkolar/backlog_product.pdf"
-import Support from "../assets/HomeSkolar/support_presentation.pdf"
+import EpicEvents from "../assets/portfolio/epic_events.webp"
+import Orange from "../assets/portfolio/orange.webp"
 
 export const openclassrooms1 = [
     {
@@ -38,6 +39,7 @@ export const openclassrooms1 = [
         demo: 'https://aurelienallenic.github.io/Booki/',
         figma:'',
         folder:'',
+        technologies: ['html', 'css']
     },
     {
         id: 2,
@@ -48,6 +50,7 @@ export const openclassrooms1 = [
         demo: 'https://aurelienallenic.github.io/ohmyfood.github.io/',
         figma:'',
         folder:'',
+        technologies: ['html', 'css', 'scss']
     },
     {
         id: 3,
@@ -58,6 +61,7 @@ export const openclassrooms1 = [
         demo: 'https://aurelienallenic.github.io/lapanthere.github.io/',
         figma:'',
         folder:'',
+        technologies: ['seo']
     },
     {
         id: 4,
@@ -68,16 +72,18 @@ export const openclassrooms1 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['html', 'css', 'javascript']
     },
     {
         id: 5,
         image: Piiquante,
-        title: 'Hot-takes, api de like et partage de sauces pimentées réalisé en nodeJs et en Js',
-        titleEn:'Hot-takes, api of like and pimented sauces with nodeJs and Js',
+        title: 'Hot-takes, api de like et partage de sauces pimentées réalisé en nodeJs et en Javascript',
+        titleEn:'Hot-takes, api of like and pimented sauces with nodeJs and Javascript',
         github: 'https://github.com/AurelienAllenic/hot-takes',
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['javascript', 'nodejs']
     },
     {
         id: 6,
@@ -88,6 +94,7 @@ export const openclassrooms1 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['reactjs', 'nodejs']
     },
 
 ]
@@ -102,6 +109,7 @@ export const openclassrooms2 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['javascript', 'html', 'css']
     },
     {
         id: 2,
@@ -112,6 +120,7 @@ export const openclassrooms2 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['javascript', 'html', 'css']
     },
     {
         id: 3,
@@ -122,16 +131,18 @@ export const openclassrooms2 = [
         demo: 'https://aurelienallenic.github.io/les_petits_plats/',
         figma:'',
         folder:'',
+        technologies: ['javascript', 'html', 'css']
     },
     {
         id: 4,
         image: Kasa,
         title: "Kasa, projet de site de location d'appartement en reactJs",
-        titleEn:'Kasa, project of creating an apartment rental online website in javascript',
+        titleEn:'Kasa, project of creating an apartment rental online website in reactJs',
         github: 'https://github.com/AurelienAllenic/kasa_p11',
         demo: 'https://aurelienallenic.github.io/kasa_p11/',
         figma:'',
         folder:'',
+        technologies: ['reactjs']
     },
     {
         id: 5,
@@ -142,6 +153,7 @@ export const openclassrooms2 = [
         demo: '',
         figma: 'https://www.figma.com/file/AS6HKjnwIh1bpK0SZE90GJ/learnHome?type=design&node-id=0-1&mode=design',
         folder:'',
+        technologies: ['userstories', 'figma']
     },
     {
         id: 6,
@@ -152,6 +164,7 @@ export const openclassrooms2 = [
         demo: 'https://aurelienallenic.github.io/wealthhealth-op-p14/',
         figma:'',
         folder:'',
+        technologies: ['jquery']
     },
     {
         id: 7,
@@ -162,6 +175,7 @@ export const openclassrooms2 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['reactjs', 'nodejs']
     },
     {
         id: 8,
@@ -172,6 +186,7 @@ export const openclassrooms2 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['reactjs','nodejs']
     },
 ]
 export const openclassrooms3 = [
@@ -184,6 +199,7 @@ export const openclassrooms3 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['python']
     },
     {
         id: 2,
@@ -206,7 +222,8 @@ export const openclassrooms3 = [
             titleEn: 'backlog',
             link: BacklogProduit,
         },
-    ]
+    ],
+    technologies: ['backlog']
     },
     {
         id: 3,
@@ -217,6 +234,7 @@ export const openclassrooms3 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['python']
     },
     {
         id: 4,
@@ -227,6 +245,7 @@ export const openclassrooms3 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['django', 'javascript', 'html', 'twig']
     },
     {
         id: 5,
@@ -237,6 +256,7 @@ export const openclassrooms3 = [
         demo: '',
         figma: '',
         folder:'',
+        technologies: ['python']
     },
     {
         id: 6,
@@ -247,6 +267,7 @@ export const openclassrooms3 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['django', 'html', 'css', 'twig']
     },
     {
         id: 7,
@@ -257,6 +278,7 @@ export const openclassrooms3 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['django rest', 'django']
     },
     {
         id: 8,
@@ -267,6 +289,29 @@ export const openclassrooms3 = [
         demo: '',
         figma:'',
         folder:'',
+        technologies: ['django', 'flask', 'pytest']
+    },
+    {
+        id: 9,
+        image: EpicEvents,
+        title: "Epic Events, développement d'un backend sécurisé avec Python et SQL dans le domaine de l'évenementiel",
+        titleEn:"Epic Events, development of a secure backend with Python and SQL in the event management field",
+        github: 'https://github.com/AurelienAllenic/epic_events---P12',
+        demo: '',
+        figma:'',
+        folder:'',
+        technologies: ['python', 'sql', 'sentry']
+    },
+    {
+        id: 10,
+        image: Orange,
+        title: "Orange County Lettings, correction de bugs, testing, logging avec Sentry, documentation avec Read The Docs et Spynx. Création d'un pipeline CI/CD avec GitHub Actions, Render et Docker",
+        titleEn:"Orange County Lettings, bugs correction, testing, logging with Sentry, documentation with Read The Docs and Sphinx. Creation of a CI/CD pipeline with GitHub Actions, Render and Docker",
+        github: 'https://github.com/AurelienAllenic/Python-OC-Lettings-FR',
+        demo: '',
+        figma:'',
+        folder:'',
+        technologies: ['sentry', 'pipeline ci/cd', 'docker']
     },
 ]
 export const projects = [
@@ -279,35 +324,39 @@ export const projects = [
         demo: 'https://paroxx.com',
         figma:'',
         folder:'',
+        technologies: ['reactjs', 'scss']
     },
     {
         id: 2,
         image: Cleo,
         title: "cleoperrin.com : site vitrine à destination des milieux de l'architecture et du design réalisé en ReactJs",
-        titleEn:'cleoperrin.com : showcase project for architects and designers',
+        titleEn:'cleoperrin.com : showcase project for architects and designers in ReactJs',
         github: '',
         demo: 'https://cleoperrin.com',
         figma:'',
         folder:'',
+        technologies: ['reactjs', 'styled-components']
     },
     {
         id: 3,
         image: Claquettes,
-        title: "claquettes-swing.fr : participation à la création et au déploiement",
-        titleEn:'claquettes-swing.fr : participation to the creation and deployment',
+        title: "claquettes-swing.fr : participation à la création du front en ReactJs et au déploiement",
+        titleEn:'claquettes-swing.fr : participation to the front creation in ReactJs and to the deployment',
         github: '',
         demo: 'https://claquettes-swing.fr',
         figma:'',
         folder:'',
+        technologies: ['reactjs', 'scss', 'twig']
     },
     {
         id: 4,
         image: Linconnu,
-        title: "linconnu-magic.com : Création d'un site web de magie à destination du public",
-        titleEn:'linconnu-magic.com : Creation of a magic website aiming the public',
+        title: "linconnu-magic.com : Création d'un site web de magie à destination du public en ReactJs",
+        titleEn:'linconnu-magic.com : Creation of a magic website aiming the public in ReactJs',
         github: '',
         demo: 'https://linconnu-magic.com',
         figma:'',
         folder:'',
+        technologies: ['reactjs', 'styled-components']
     }
 ]

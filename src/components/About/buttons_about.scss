@@ -29,7 +29,7 @@
 
 .container_change_languages{
     position: fixed;
-    top: 15%;
+    bottom: 5%;
     right: 3%;
     z-index: 999999;
 }
@@ -141,11 +141,6 @@
         font-size: 1.2rem;
     }
 }
-@media(max-width: 1073px){
-    .container_change_languages{
-        top: 20%;
-    }
-}
 @media(max-width: 825px){
     .linkHome a{
         font-size: 1rem;
@@ -165,16 +160,13 @@
     .content_confirmation_language{
         font-size: 2.5rem;
     }
-    .container_change_languages{
-        top: 30%;
-    }
 }
 @media(max-width : 585px){
     .icon_change_languages{
     font-size: 35px;
     }
-} 
-@media(max-width : 514px){
+}
+@media(max-width : 524px){
     .logos figcaption {
         font-size: 0rem;
         bottom: -0.7em;
@@ -193,11 +185,16 @@
     .link_home a {
         font-size: 4rem;
     }
+    .content_confirmation_language{
+        font-size: 1.2rem;
+    }
+    .button_change_languages{
+        font-size: 17.5px;
+    }
 }
 @media(max-width : 437px){
     .icon_change_languages{
     font-size: 25px;
-    right: 5%;
     }
     .button_change_languages{
         font-size: 20px;
@@ -215,14 +212,6 @@
     }
     .linkHome a{
         font-size: 0.9rem;
-    }
-}
-@media(max-width : 389px){
-    .content_confirmation_language{
-        font-size: 1.2rem;
-    }
-    .button_change_languages{
-        font-size: 17.5px;
     }
 }
 @media(max-width : 285px){

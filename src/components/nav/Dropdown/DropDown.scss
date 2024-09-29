@@ -8,8 +8,9 @@
     flex-direction: column;
     gap: 1em;
     margin-left: 0%;
-    background: white;
     padding: 1%;
+    background-color: rgb(31, 31, 31);
+    color: white;
   }
   
   .dropdown-menu li {
@@ -17,15 +18,10 @@
     cursor: pointer;
     padding-left: 10%;
     padding-right: 10%;
-    color: #101010;
     transition: all ease 0.5s;
     &:hover{
       transition: all ease 0.5s;
       transform: scale(1.1);
-      color: #404040;
-      a{
-        color: #404040;
-      }
     }
   }
   .dropdown-element{

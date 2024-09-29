@@ -1,4 +1,7 @@
 
+.overflow{
+    overflow: hidden;
+}
 .logo{
     width: 40%;
     transition: all ease 0.5s;
@@ -12,17 +15,35 @@
     display: flex;
     flex: wrap;
     align-items: center;
+    justify-content: center;
     padding: 0.1rem;
     position: fixed;
     width: 100%;
     min-height: 75px;
     max-height: 75px;
-    background-color: #fff;
-    color: #101010;    
+    color: white;    
     z-index: 1000;
     top: 0; 
     animation: apparition 1s forwards;
+    transition: all ease-in 0.3s;
     box-shadow: 0px 37px 15px -3px rgba(0,0,0,0.1);
+}
+.scrolled{
+    background-color: white!important;
+    transition: all ease-in 0.3s;
+    color: #000!important;
+    &:hover{
+        transition: all ease-in 0.3s;
+        color: #131313!important;
+    }
+}
+.scrolled_no_back{
+    transition: all ease-in 0.3s;
+    color: #000!important;
+    &:hover{
+        transition: all ease-in 0.3s;
+        color: #131313!important;
+    }
 }
 .navbar_links{
     display: flex;
@@ -43,7 +64,7 @@
 .navbar_link{
     padding: 0 1rem;
     color: inherit;
-    color: #101010;
+    color: white;
     transition: all ease-in-out 0.5s;
     &:hover{
         cursor: pointer;
@@ -71,7 +92,6 @@
 }
 .linkStyle{
     margin: 2%;
-    color: #101010;
 }
 @media screen and (max-width: 1073px) {
     .navbar{
@@ -102,7 +122,6 @@
         width: 0;
         padding: 0.5rem;
         visibility: hidden;
-        background-color: #fff;
         transition: all .8s ease-out;
     }
     .show-nav .navbar_links{

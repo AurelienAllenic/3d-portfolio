@@ -1,17 +1,52 @@
-/* eslint-disable */
+import React, { useState, useEffect } from "react";
 import "./nav.scss";
 import "./Dropdown/DropDown.scss";
-import React, { useState, useEffect } from "react";
 import { DropDownElements } from "./Dropdown/DropDownElements";
-import { AiOutlineHome } from "react-icons/ai";
-import { Link, animateScroll as scroll } from "react-scroll";
-import { useLanguage } from '../Context/LanguageContext'
+import { Link } from "react-scroll";
+import { useLanguage } from '../Context/LanguageContext';
 
 function Navbar() {
   const { language } = useLanguage();
   const [showlinks, setShowlinks] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  
+  const [navbarBackground, setNavbarBackground] = useState(false);
+  const [isMobile, setIsMobile] = useState(null)
+
+  const handleScroll = () => {
+    if (window.innerWidth > 1073) {
+      if (window.scrollY > 50) {
+        setNavbarBackground(true);
+      } else {
+        setNavbarBackground(false);
+      }
+    }
+  };
+  useEffect(() => {
+    if (window.innerWidth < 1073) {
+      setIsMobile(true)
+    }else{
+      setIsMobile(false)
+    }
+  }, [isMobile])
+  useEffect(() => {
+    const handleResize = () => {
+        setIsMobile(window.innerWidth < 1073);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+        window.removeEventListener('resize', handleResize);
+    };
+}, []);
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const closeDropdown = () => {
     setDropdown(false);
   };
@@ -24,6 +59,7 @@ function Navbar() {
     navElement.classList.remove("show-nav");
     closeDropdown();
     setShowlinks(false);
+    document.body.classList.remove('overflow')
   };
 
   const toggleDropdown = () => {
@@ -44,28 +80,23 @@ function Navbar() {
 
   const handleShowLinks = () => {
     setShowlinks(!showlinks);
+    if(showlinks){
+      document.body.classList.remove('overflow')
+    }else{
+      document.body.classList.add('overflow')
+    }
   };
 
   return (
     <>
       <div
-        className={`navbar ${showlinks ? "show-nav" : "hide-nav"}`}
+        className={`navbar ${showlinks ? "show-nav" : "hide-nav"} ${navbarBackground || isMobile ? "scrolled" : ""}`}
         id="nav"
       >
-        <Link
-          className="navbar_logo"
-          to="home"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={800}
-          onClick={handleShowLinks}
-        >
-        </Link>
-        <ul className="navbar_links">
+        <ul className={`navbar_links ${isMobile ? "scrolled" : ""}`}>
           <li className="navbar_item slideInDown-1">
             <Link
-              className="navbar_link"
+              className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`}
               to="home"
               spy={true}
               smooth={true}
@@ -78,7 +109,7 @@ function Navbar() {
           </li>
           <li className="navbar_item slideInDown-2">
             <Link
-              className="navbar_link"
+              className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`}
               to="cvLetter"
               spy={true}
               smooth={true}
@@ -91,7 +122,7 @@ function Navbar() {
           </li>
           <li className="navbar_item slideInDown-3">
             <Link
-              className="navbar_link"
+              className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`}
               to="languages"
               spy={true}
               smooth={true}
@@ -107,10 +138,10 @@ function Navbar() {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
-            <div className="navbar_link" onClick={toggleDropdown}>
+            <div className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`} onClick={toggleDropdown}>
               Portfolio
               {dropdown && (
-                <ul className="dropdown-menu">
+                <ul className={`dropdown-menu ${navbarBackground || isMobile ? "scrolled" : ""}`}>
                   {DropDownElements.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -119,7 +150,7 @@ function Navbar() {
                         onClick={closeNavMob}
                         spy={true}
                         smooth={true}
-                        offset={0}
+                        offset={-100}
                         duration={800}
                       >
                         <span>{language === 'FR' ? item.title : item.titleEn}</span>
@@ -132,7 +163,7 @@ function Navbar() {
           </li>
           <li className="navbar_item slideInDown-5">
             <Link
-              className="navbar_link"
+              className={`navbar_link ${navbarBackground || isMobile ? "scrolled_no_back" : ""}`}
               to="contact"
               spy={true}
               smooth={true}
