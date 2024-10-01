@@ -5,28 +5,36 @@
         transform: scale(1.02);
     }
 }
-
+.disabled {
+    pointer-events: none;
+    opacity: 0.5!important;
+}
+.openModal{
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.1);
+    transition: 0.3s ease-out;
+}
 .first-title{
     font-size: 1.6rem;
     text-align: center;
     font-family: "Lemon";
     letter-spacing: 0.2rem;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
 .container_arrow_title {
     display: flex;
-    gap: 0rem;
+    gap: 2rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     white-space: nowrap;
     transition: all ease 0.5s;
     animation: arrow_portfolio 1s ease-out infinite alternate;
-    position: relative; /* Position relative pour positionner correctement le pseudo-élément */
-    cursor: pointer; /* Déplacement du curseur déplacé ici pour éviter la répétition */
+    position: relative;
+    cursor: pointer;
     margin: 2%;
-    /* Lorsque le container est survolé, applique un effet de mise à l'échelle */
+    box-shadow: 0px 37px 15px -3px rgba(0,0,0,0.1);
     &:hover {
         transform: scale(1.1);
         svg{
@@ -39,10 +47,11 @@
             transform: rotate(0deg);
         }
     }
-
     h1 {
         position: relative;
         display: inline-block;
+        color: white;
+        padding: 10%;
     }
 
     h1::after {
@@ -51,27 +60,24 @@
         bottom: -10px;
         left: 0;
         width: 0%;
-        height: 1px;
+        height: 5px;
         background-color: transparent;
         transition: width 0.3s ease;
     }
-
     svg {
         transition: all ease 0.5s;
         height: 2em;
         width: 2em;
+        fill: white;
     }
-
     &:hover h1::after {
         width: 100%;
-        background-color: #101010;
+        background-color: white;
     }
     &:hover h1:focus {
         width: 100%;
     }
 }
-
-
 .modal{
     position: fixed;
     width: 100%;
@@ -89,22 +95,31 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 999;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
-.modal-content{
-    position: fixed;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    width: 50%;
+.modal-content {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
 }
 .close_button{
     position: absolute;
     top: 2%;
-    left: 1%;
+    right: 3%;
+    svg{
+        height: 1.5em;
+        width: 1.5em;
+    }
     &:hover{
         cursor: pointer;
         transform: scale(1.1);
@@ -122,6 +137,15 @@
             cursor: pointer;
             transform: scale(1.2);
             transition: all ease 0.5s;
+        }
+        svg{
+            height: 2em;
+            width: 2em;
+            transition: all ease 0.5s;
+            &:hover{
+                transition: all ease 0.5s;
+                transform: scale(1.05);
+            }
         }
     }
 }
@@ -149,6 +173,7 @@
     box-shadow: 0px 37px 15px -3px rgba(0,0,0,0.1);
     z-index: 1;
     color: #101010;
+    overflow: hidden;
     &:hover{
         cursor: pointer;
     }
@@ -173,7 +198,7 @@
     width: 95%;
     border-radius: 25px;
     height: auto;
-    max-height: 360px;
+    max-height:  367px;
     object-fit: cover;
     box-shadow: 0px 37px 15px -3px rgba(0,0,0,0.1);
     transition: all ease 0.5s;
@@ -185,13 +210,15 @@
 }
 .container_links_portfolio{
     display: flex;
-    gap: 2em;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    width: 100%;
+    gap: 1rem;
 }
 .link-single-project{
     border-radius: 25px;
-    padding: 7%;
+    padding: 3%;
     white-space: nowrap;
     color: #101010;
     box-shadow: 0px 10px 10px -3px rgba(0,0,0,0.1);
@@ -215,18 +242,18 @@
         &::after{
             content: '';
             width: 75%;
-            height: 1px;
+            height: 2px;
             background: white;
             inset: 10px;
             left: 11px;
-            top: 30px;
+            top: 35px;
             transition: all ease 0.5s;
         }
     }
 }
 .link-single-project-figma{
     border-radius: 25px;
-    padding: 20%;
+    padding: 4%;
     white-space: nowrap;
     color: #101010;
     box-shadow: 0px 10px 10px -3px rgba(0,0,0,0.1);
@@ -254,7 +281,7 @@
             background: white;
             inset: 10px;
             left: 10px;
-            top: 30px;
+            top: 45px;
             transition: all ease 0.5s;
         }
     }
@@ -276,6 +303,25 @@ margin-bottom: 1%;
     gap: 1em;
     justify-content: center;
 
+}
+.take_space {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container_title_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin: 1%;
+    img{
+        width: 80%;
+        height: 70%;
+    }
 }
 .dev{
     margin-top: 5%;
@@ -318,21 +364,71 @@ margin-bottom: 1%;
 .margin{
     margin-top: 15%;
 }
-@media (max-width: 1363px){
-    .arrows_img{
-        width: 90%;
-        gap: 1rem;
+@media (max-width: 1420px){
+    .enabled{
+        width: 90%!important;
     }
 }
 @media (max-width: 925px){
     .modal-content{
         width: 70%;
     }
+    .img-single-project{
+        max-width: 65%;
+    }
+    .close_button{
+        svg{
+            height: 1.2em;
+            width: 1.2em;
+        }
+    }
 }
+@media (max-width: 727px){
+    .arrows_img{
+        gap: 1rem;
+        }
+}
+
 @media (max-width: 601px){
     .modal-content{
         width: 95%;
     }
+    .img-single-project{
+        max-width: 75%;
+    }
+}
+@media (max-width: 593px){
+    .arrows_img{
+        gap: 1rem;
+        button{
+            svg{
+                height: 1.5em;
+                width: 1.5em;
+            }
+        }
+    }
+    .card-single-project{
+        padding: 5%
+    }
+}
+@media (max-width: 473px){
+    .arrows_img{
+        gap: 0.5rem;
+        button{
+            svg{
+                height: 1.5em;
+                width: 1.5em;
+            }
+        }
+    }
+    .card-single-project{
+        padding: 5%
+    }
+}
+@media (max-width: 389px){
+    .arrows_img{
+        gap: 1rem;
+        }
 }
 @media (min-width: 558px){
     .main-title-portfolio{
