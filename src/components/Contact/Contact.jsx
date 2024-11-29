@@ -23,7 +23,7 @@ const Contact = () => {
         message: form.current.message.value,
     };
     try {
-        const response = await fetch('https://aurelienallenic-0ea95fa598d3.herokuapp.com/send-email', {
+        const response = await fetch(`${import.meta.env.VITE_HEROKU_LINK}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
