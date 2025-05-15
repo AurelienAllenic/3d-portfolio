@@ -6,12 +6,14 @@ import Contact from './Contact/Contact'
 import About from './About/About'
 import CvLetter from './CvLetter/CvLetter'
 import PythonFormation from './Portfolio/PythonFormation'
+import PopupNext from './PopupNext/PopupNext'
 
 const EntireApp = () => {
   return (
     <>
       <div className='container_all_app'>
         <About />
+        <PopupNext />
         <CvLetter />
         <Languages />
         <PythonFormation />

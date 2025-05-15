@@ -8,31 +8,41 @@ import { FaNodeJs } from "react-icons/fa";
 import { SiPython } from "react-icons/si";
 import { SiDjango } from "react-icons/si";
 import { FaSass } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
+import "./buttons_about.scss";
 
 const Logos = () => {
   return (
     <div className='logos'>
       <div className='container_logos_left'>
-        <figure>
-          <ImHtmlFive fill='#E44D26' />
-          <figcaption>HTML</figcaption>
-        </figure>
-        <figure>
-          <IoLogoCss3 fill='#264DE4' />
-          <figcaption>CSS</figcaption>
-        </figure>
-        <figure>
-          <FaSass fill='#d49cb4' />
-          <figcaption>Sass</figcaption>
-        </figure>
-        <figure>
-          <SiJavascript fill='#F7DF1E' />
-          <figcaption>JavaScript</figcaption>
-        </figure>
-        <figure>
-          <FaReact fill='#61DAFB' />
-          <figcaption>React</figcaption>
-        </figure>
+        <div className='container_logos_left_first_part'>
+          <figure>
+            <ImHtmlFive fill='#E44D26' />
+            <figcaption>HTML</figcaption>
+          </figure>
+          <figure>
+            <IoLogoCss3 fill='#264DE4' />
+            <figcaption>CSS</figcaption>
+          </figure>
+          <figure>
+            <FaSass fill='#d49cb4' />
+            <figcaption>Sass</figcaption>
+          </figure>
+        </div>
+        <div className='container_logos_left_second_part'>
+          <figure>
+            <SiJavascript fill='#F7DF1E' />
+            <figcaption>JavaScript</figcaption>
+          </figure>
+          <figure>
+            <FaReact fill='#61DAFB' />
+            <figcaption>React</figcaption>
+          </figure>
+          <figure>
+            <RiNextjsFill fill='#000' style={{background: 'white', borderRadius: '50%', overflow: 'hidden'}}/>
+            <figcaption>NextJs</figcaption>
+          </figure>
+        </div>
       </div>
       <div className='container_logos_right'>
         <figure>

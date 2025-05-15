@@ -1,0 +1,220 @@
+.popup-next-container{
+    position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    .popup-next{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 300px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 10px;
+        background-size: cover;
+        z-index: 1000;
+        overflow: hidden;
+        box-shadow: -1px 1px 17px 0px rgba(255, 255, 255, 0.73);
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: blur(100px);
+            z-index: 0;
+        }
+        .popup-next-close{
+
+            z-index: 5; 
+            button{
+                position: absolute;
+                top: 5px;
+                right: 5px;
+                svg{
+                    fill: #fff;
+                }
+            }
+        }
+        .popup-next-content{
+            position: relative;
+            z-index: 1; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            h2{
+                font-size: 22px;
+            }
+            button{
+                background-color: #eeeeee;
+                color: #000;
+                font-weight: 500;
+                border-radius: 5px;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-size: 22px;
+                transition: all 0.3s ease;
+                &:hover{
+                    background-color: #000;
+                    color: #fff;
+                    transition: all 0.3s ease;
+                    box-shadow: -1px 1px 17px 0px rgba(255, 255, 255, 0.73);
+                }
+            }
+        }
+    }
+}
+.reopen-popup{
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000000;
+    width: 63px;
+    button{
+        font-size: 25px;
+        width: 80%;
+        height: 50px;
+        background-color: white;
+        border-radius: 15px 15px 15px 15px;
+        padding: 0.3rem;
+        box-shadow: 0px 10px 10px -3px rgba(0,0,0,0.1);
+        transition: all ease 1s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            transform: scale(1.1);
+            transition: all ease 1s;
+            cursor: pointer;
+            background-color: #404040;
+            color: white;
+            .icon_change_languages{
+                transform: scale(1.1);
+                color: white;
+                transition: all ease 0.5s;
+            }
+        }
+    }
+}
+
+
+.reopen-popup {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.reopen-popup button {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espace entre l'icône et le texte */
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Bouton rond pour une apparence moderne */
+    cursor: pointer;
+    position: relative; /* Nécessaire pour positionner le tooltip */
+    transition: background-color 0.3s;
+}
+
+
+.nextjs-logo {
+    width: 24px; /* Ajustez la taille selon vos besoins */
+    height: 24px;
+    vertical-align: middle;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #333; /* Fond sombre pour la bulle */
+    color: white;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1001; /* Au-dessus du bouton */
+    bottom: 15%; /* Position au-dessus du bouton */
+    left: 120%;
+    white-space: nowrap; /* Empêche le texte de se casser */
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 14px;
+}
+
+.reopen-popup button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Styles existants pour la popup */
+.popup-next-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-next {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.popup-next-close {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popup-next-content {
+    margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+    .popup-next-container .popup-next{
+        width: 400px;
+        height: 250px;
+    }
+}
+@media (max-width: 440px) {
+    .popup-next-container .popup-next{
+        width: 300px;
+        height: 200px;
+    }
+    .popup-next-container .popup-next .popup-next-content h2, .popup-next-container .popup-next .popup-next-content button{
+        font-size: 18px!important;
+    }
+}
+@media (max-width: 370px) {
+    .tooltip{
+        font-size: 12px!important;
+    }
+}
+@media (max-width: 341px) {
+    .tooltip{
+        font-size: 10px!important;
+    }
+}
