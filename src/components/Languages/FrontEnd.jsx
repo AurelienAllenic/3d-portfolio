@@ -42,8 +42,8 @@ const FrontEnd = ({ setCodingLanguage }) => {
           <ul className='list_card'>
             <li>HTML</li>
             <li>CSS/SCSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
+            <li>Js / React</li>
+            <li>NextJs</li>
           </ul>
         </div>
       </div>
