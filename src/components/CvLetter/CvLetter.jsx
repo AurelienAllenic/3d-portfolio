@@ -32,7 +32,12 @@ const CvLetter = () => {
     <section className="cvLetter" id="cvLetter">
       <h1 className="main-title-languages">Curriculum</h1>
       <div className="cvLetter_container">
-        <div className="container_cv" onClick={() => downloadDocument(pdf)}>
+        <div
+          className={`container_cv ${
+            language === "FR" ? "container_cv_fr" : "container_cv_en"
+          }`}
+          onClick={() => downloadDocument(pdf)}
+        >
           <img
             src={image}
             alt={language === "FR" ? "CV en français" : "CV in English"}

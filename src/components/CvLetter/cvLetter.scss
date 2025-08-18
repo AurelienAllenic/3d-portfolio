@@ -32,6 +32,7 @@
 .container_letter img {
   object-fit: contain;
   width: 70%;
+  max-width: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,10 +94,14 @@
   position: relative;
   overflow: hidden;
 }
-
+.container_cv_en::after {
+  content: "Download";
+}
+.container_cv_fr::after {
+  content: "Télécharger";
+}
 .container_cv::after,
 .container_letter::after {
-  content: "Télécharger";
   position: absolute;
   top: 50%;
   left: 50%;
