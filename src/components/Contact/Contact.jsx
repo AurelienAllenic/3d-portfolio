@@ -21,16 +21,13 @@ const Contact = () => {
       message: form.current.message.value,
     };
     try {
-      const response = await fetch(
-        `${import.meta.env.VITE_VERCEL_LINK}/send-email`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const response = await fetch(`${import.meta.env.VITE_VERCEL_LINK}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
       const result = await response.json();
 
@@ -55,61 +52,23 @@ const Contact = () => {
     }
   };
 
+  const goToContactForm = () => {
+    window.location.href =
+      "https://portfolio-next-aurelien.vercel.app/#contact";
+  };
+
   return (
     <>
-      {showConfirmation && (
-        <div className="container_confirmation_contact">
-          <p className="content_confirmation_contact">
-            {isError
-              ? language === "FR"
-                ? "Message non envoyé !"
-                : "Message not sent !"
-              : language === "FR"
-              ? "Message envoyé !"
-              : "Message Sent !"}
-          </p>
-        </div>
-      )}
       <a className="anchor" id="contact"></a>
       <section className="section-contact" id="no_border">
-        <form ref={form} onSubmit={sendEmail} className="form">
-          <h1 className="main-title-contact">Contact</h1>
-          <h2 className="sub-title-contact">
-            {language === "FR"
-              ? "N'hésitez pas à me contacter, je reviendrai vers vous dans les plus brefs délais"
-              : "Feel free to contact me, I will come back to you shortly"}
-          </h2>
-          <div className="container_inputs">
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder={language === "FR" ? "Votre Nom" : "Your full Name"}
-              required
-              className="input"
-            />
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder={language === "FR" ? "Votre Email" : "Your Email"}
-              required
-              className="input"
-            />
-          </div>
-          <textarea
-            id="textarea"
-            name="message"
-            placeholder={language === "FR" ? "Votre message" : "Your message"}
-            rows="7"
-            required
-            className="textarea"
-          />
-          <button type="submit" className="btn-submit">
-            {language === "FR" ? "Envoyer" : "Send"}
-            <FaArrowRight />
-          </button>
-        </form>
+        <h2>
+          {language == "FR"
+            ? "Le formulaire est disponible sur la version next de ce site"
+            : "The form is available on the next version of this website"}
+        </h2>
+        <button className="see-form-btn" onClick={goToContactForm}>
+          {language == "FR" ? "Voir le formulaire" : "See the form"}
+        </button>
       </section>
     </>
   );
